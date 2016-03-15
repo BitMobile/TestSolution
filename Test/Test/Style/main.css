@@ -23,5 +23,26 @@ Button
     margin-left:25%;
      text-align: center;
 }
+CssButton
+{ 
+    width:50%; 
+    height:10%; 
+    background-color:#7b68ee; 
+    color:#c6e2ff;
+    margin-top:2%;
+    margin-left:25%;
+     text-align: center;
+}
+
+ChangeCssButton
+{ 
+    width:25%; 
+    height:10%; 
+    background-color:#008b8b; 
+    color:#ffe1ff;
+    margin-top:2%;
+     margin-left:37%;
+     text-align: center;
+}
 
 

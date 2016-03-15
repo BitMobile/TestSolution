@@ -10,6 +10,7 @@ namespace Test
     {
         Button invisibleButton;
         Button cssButton;
+        
 
         public override void OnLoading()
         {
@@ -31,28 +32,47 @@ namespace Test
         }
 
 
-        void back_OnClick(object sender, EventArgs e)
+        void Back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
         }
 
+        void ChangeCss_OnClick (object sender, EventArgs e)
+        {
 
+
+            if (cssButton.CssClass == "CssButton")
+            {
+                cssButton.CssClass = "ChangeCssButton";
+                cssButton.Refresh();
+            }
+            else if (cssButton.CssClass == "ChangeCssButton")
+            {
+                cssButton.CssClass = "CssButton";
+                cssButton.Refresh();
+            }
+        }
 
         void initialize()
         {
-            invisibleButton = new Button { Text = "HIDE ME", Visible = false };
             var vl = new VerticalLayout();
             AddChild(vl);
 
+            invisibleButton = new Button { Text = "HIDE ME", Visible = false };
 
+            cssButton = new Button();
+            cssButton.CssClass = "CssButton";
+            cssButton.Text = "CssButton";
+            cssButton.OnClick += ChangeCss_OnClick;
+            
             vl.AddChild(new Button("Unhide Button", Visible_OnClick));
-
-            vl.AddChild(new Button("Back", back_OnClick));
-
-
             vl.AddChild(invisibleButton);
+            vl.AddChild(cssButton);
+
+            vl.AddChild(new Button("Back", Back_OnClick));
         }
 
+    
     }
 
 
