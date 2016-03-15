@@ -12,26 +12,16 @@ namespace Test
 
         public override void OnLoading()
         {
-            var vl = new VerticalLayout();
-
-            vl.AddChild(new Button("Test Buttons", ButtonScreenTest_OnClick));
-            vl.AddChild(new Button("Make Yandex Photos", MakePhotoButton_OnClick));
-            vl.AddChild(new Button("Web Request", MakeWebRequest_OnClick));
-
-     
-            vl.AddChild(new Button("Exit", ExitButton_OnClick));
-
-            AddChild(vl);
+            initialize();
+   
         }
 
 
 
-        void MakePhotoButton_OnClick(object sender, EventArgs e)
+        void YandexScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("YandexScreen");
         }
-
-
         void MakeWebRequest_OnClick(object sender, EventArgs e)
         {
 
@@ -49,16 +39,23 @@ namespace Test
 
 
         }
-
         void ExitButton_OnClick(object sender, EventArgs e)
         {
             Application.Terminate();
         }
-
-
-        void ButtonScreenTest_OnClick(object sender, EventArgs e)
+        void ButtonScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("ButtonScreen");
+        }
+
+        private void initialize ()
+        {
+            var vl = new VerticalLayout();
+            vl.AddChild(new Button("Test Buttons", ButtonScreen_OnClick));
+            vl.AddChild(new Button("Make Yandex Photos", YandexScreen_OnClick));
+            vl.AddChild(new Button("Web Request", MakeWebRequest_OnClick));
+            vl.AddChild(new Button("Exit", ExitButton_OnClick));
+            AddChild(vl);
         }
     }
 }

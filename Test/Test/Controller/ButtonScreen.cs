@@ -8,35 +8,25 @@ namespace Test
 {
     public class ButtonScreen : Screen
     {
-        Button unvisibleButton;
+        Button invisibleButton;
+        Button cssButton;
+
         public override void OnLoading()
         {
-            unvisibleButton = new Button();
-            unvisibleButton.Text = "HIDE ME";
-            unvisibleButton.Visible = false;
-            var vl = new VerticalLayout();
-            AddChild(vl);
-
-         
-            vl.AddChild(new Button("Unhide Button", Visible_OnClick));
-
-            vl.AddChild(new Button("Back", back_OnClick));
-
-
-            vl.AddChild(unvisibleButton);
+            initialize();
 
         }
 
         void Visible_OnClick(object sender, EventArgs e)
         {
-            if (unvisibleButton.Visible == true)
+            if (invisibleButton.Visible == true)
             {
-                unvisibleButton.Visible = false;
+                invisibleButton.Visible = false;
             }
-            else if (unvisibleButton.Visible == false)
+            else if (invisibleButton.Visible == false)
             {
 
-                unvisibleButton.Visible = true;
+                invisibleButton.Visible = true;
             }
         }
 
@@ -45,5 +35,26 @@ namespace Test
         {
             BusinessProcess.DoBack();
         }
+
+
+
+        void initialize()
+        {
+            invisibleButton = new Button { Text = "HIDE ME", Visible = false };
+            var vl = new VerticalLayout();
+            AddChild(vl);
+
+
+            vl.AddChild(new Button("Unhide Button", Visible_OnClick));
+
+            vl.AddChild(new Button("Back", back_OnClick));
+
+
+            vl.AddChild(invisibleButton);
+        }
+
     }
+
+
+   
 }
