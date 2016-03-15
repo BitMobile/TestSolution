@@ -65,6 +65,8 @@ namespace Test
                     return new ButtonScreen();
                 case "CheckBoxScreen":
                     return new CheckBoxScreen();
+                case "SomeControlsScreen":
+                    return new SomeControlsScreen();
                 default:
                     throw new Exception(String.Format("Invalid controller name: {0}", name));
             }

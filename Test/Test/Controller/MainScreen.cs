@@ -43,6 +43,10 @@ namespace Test
         {
             BusinessProcess.DoAction("CheckBoxScreen");
         }
+        void SomeControlsScreen_OnClick(object sender, EventArgs e)
+        {
+            BusinessProcess.DoAction("SomeControlsScreen");
+        }
         void ExitButton_OnClick(object sender, EventArgs e)
         {
 
@@ -52,8 +56,9 @@ namespace Test
         private void initialize ()
         {
             var vl = new VerticalLayout();
-            vl.AddChild(new Button("Test Buttons", ButtonScreen_OnClick));
-            vl.AddChild(new Button("Test CheckBox", CheckBoxScreen_OnClick));
+            vl.AddChild(new Button("Buttons", ButtonScreen_OnClick));
+            vl.AddChild(new Button("CheckBox", CheckBoxScreen_OnClick));
+            vl.AddChild(new Button("SomeControls", SomeControlsScreen_OnClick));
             vl.AddChild(new Button("Make Yandex Photos", YandexScreen_OnClick));
             vl.AddChild(new Button("Web Request", MakeWebRequest_OnClick));
             vl.AddChild(new Button("Exit", ExitButton_OnClick));

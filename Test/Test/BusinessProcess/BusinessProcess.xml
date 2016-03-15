@@ -9,6 +9,8 @@
       </Action>
       <Action Name="CheckBoxScreen" NextStep="CheckBoxScreen">
       </Action>
+    <Action Name="SomeControlsScreen" NextStep="SomeControlsScreen">
+    </Action>
     </Step>
     
     
@@ -18,6 +20,8 @@
     <Step Name="ButtonScreen" Controller="ButtonScreen" StyleSheet="Style\main.css">   
     </Step>
     <Step Name="CheckBoxScreen" Controller="CheckBoxScreen" StyleSheet="Style\main.css">
+    </Step>
+  <Step Name="SomeControlsScreen" Controller="SomeControlsScreen" StyleSheet="Style\main.css">
     </Step>
   </Workflow>
 

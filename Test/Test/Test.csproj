@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Controller\CheckBoxScreen.cs" />
     <Compile Include="Controller\ButtonScreen.cs" />
+    <Compile Include="Controller\SomeControlsScreen.cs" />
     <Compile Include="Module\BusinessProcess.cs" />
     <Compile Include="Controller\YandexScreen.cs" />
     <Compile Include="Controller\MainScreen.cs" />
