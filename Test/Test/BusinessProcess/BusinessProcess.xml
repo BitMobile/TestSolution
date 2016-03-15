@@ -3,11 +3,11 @@
   <Workflow Name="Main">
     
     <Step Name="MainScreen" Controller="MainScreen" StyleSheet="Style\main.css">
-      <Action Name="YandexScreen" NextStep="YandexScreen">
-        
+      <Action Name="YandexScreen" NextStep="YandexScreen">  
       </Action>
-      <Action Name="ButtonScreen" NextStep="ButtonScreen">
-        
+      <Action Name="ButtonScreen" NextStep="ButtonScreen">       
+      </Action>
+      <Action Name="CheckBoxScreen" NextStep="CheckBoxScreen">
       </Action>
     </Step>
     
@@ -15,10 +15,10 @@
       
     <Step Name="YandexScreen" Controller="YandexScreen" StyleSheet="Style\main.css"> 
     </Step>
-  
-    <Step Name="ButtonScreen" Controller="ButtonScreen" StyleSheet="Style\main.css">
+    <Step Name="ButtonScreen" Controller="ButtonScreen" StyleSheet="Style\main.css">   
     </Step>
-   
+    <Step Name="CheckBoxScreen" Controller="CheckBoxScreen" StyleSheet="Style\main.css">
+    </Step>
   </Workflow>
 
   

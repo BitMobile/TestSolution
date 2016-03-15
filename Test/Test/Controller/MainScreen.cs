@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Text;
 using System.Net;
 using BitMobile.ClientModel3;
@@ -8,15 +9,10 @@ namespace Test
 {
     public class MainScreen : Screen
     {
-   
-
         public override void OnLoading()
         {
             initialize();
-   
         }
-
-
 
         void YandexScreen_OnClick(object sender, EventArgs e)
         {
@@ -38,20 +34,26 @@ namespace Test
             DConsole.WriteLine(String.Format("The response is received"));
 
 
-        }
-        void ExitButton_OnClick(object sender, EventArgs e)
-        {
-            Application.Terminate();
-        }
+        }     
         void ButtonScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("ButtonScreen");
         }
+        void CheckBoxScreen_OnClick (object sender, EventArgs e)
+        {
+            BusinessProcess.DoAction("CheckBoxScreen");
+        }
+        void ExitButton_OnClick(object sender, EventArgs e)
+        {
 
+            Application.Terminate();
+
+        }
         private void initialize ()
         {
             var vl = new VerticalLayout();
             vl.AddChild(new Button("Test Buttons", ButtonScreen_OnClick));
+            vl.AddChild(new Button("Test CheckBox", CheckBoxScreen_OnClick));
             vl.AddChild(new Button("Make Yandex Photos", YandexScreen_OnClick));
             vl.AddChild(new Button("Web Request", MakeWebRequest_OnClick));
             vl.AddChild(new Button("Exit", ExitButton_OnClick));

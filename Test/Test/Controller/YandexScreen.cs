@@ -1,5 +1,4 @@
 ﻿using System;
-
 using BitMobile.ClientModel3;
 using BitMobile.ClientModel3.UI;
 
@@ -41,8 +40,6 @@ namespace Test
             YandexPhoto.SyncPhotos();
             UpdateSyncButton();
         }
-
-
         void btn_OnClick(object sender, EventArgs e)
         {
             Guid id = Guid.NewGuid();
@@ -62,8 +59,5 @@ namespace Test
         {
             BusinessProcess.DoBack();
         }
-
-       
-
     }
 }

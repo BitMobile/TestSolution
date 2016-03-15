@@ -63,6 +63,8 @@ namespace Test
                     return new YandexScreen();
                 case "ButtonScreen":
                     return new ButtonScreen();
+                case "CheckBoxScreen":
+                    return new CheckBoxScreen();
                 default:
                     throw new Exception(String.Format("Invalid controller name: {0}", name));
             }

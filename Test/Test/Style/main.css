@@ -45,4 +45,20 @@ ChangeCssButton
      text-align: center;
 }
 
+CheckBox {
+	width: 50%;
+	height: 10%;
+    margin-top:2%;   
+     margin-left:25%;
+}
+
+CssCheckBox {
+	width: 50%;
+	height: 10%;
+    margin-top:2%;   
+     margin-left:50%;
+}
+
+
+
 
