@@ -5,13 +5,17 @@ using BitMobile.ClientModel3.UI;
 
 namespace Test
 {
-    public class ThirdScreen : Screen
+    public class YandexScreen : Screen
     {
+        Button syncButton;
         public override void OnLoading()
         {
             var vl = new VerticalLayout();
             AddChild(vl);
+            syncButton = new Button();
+            syncButton.OnClick += SyncButton_OnClick;
 
+            vl.AddChild(syncButton);
             var btn = new Button();
             btn.Text = "Make snapshot";
             btn.OnClick += btn_OnClick;
@@ -19,11 +23,25 @@ namespace Test
             vl.AddChild(btn);
 
             vl.AddChild(new Button("Back", back_OnClick));
-
-            vl.AddChild(new Button("Back2", back_OnClick));
-
-            vl.AddChild(new Button("Back3", back_OnClick));
+            
         }
+
+        public override void OnShow()
+        {
+            UpdateSyncButton();
+        }
+
+        private void UpdateSyncButton()
+        {
+            syncButton.Text = String.Format("Sync {0} yandex photos", DB.GetCountOfUnsyncedPhotos());
+        }
+
+        void SyncButton_OnClick(object sender, EventArgs e)
+        {
+            YandexPhoto.SyncPhotos();
+            UpdateSyncButton();
+        }
+
 
         void btn_OnClick(object sender, EventArgs e)
         {
@@ -36,8 +54,7 @@ namespace Test
                     photo.Id = id;
                     photo.FileName = fileName;
                     photo.Save();
-
-                    BusinessProcess.DoBack();
+                    
                 }
             );
         }
@@ -45,5 +62,8 @@ namespace Test
         {
             BusinessProcess.DoBack();
         }
+
+       
+
     }
 }

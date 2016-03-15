@@ -2,28 +2,23 @@
 <BusinessProcess>
   <Workflow Name="Main">
     
-    <Step Name="Screen1" Controller="MainScreen" StyleSheet="Style\main.css">
-      <Action Name="Forward" NextStep="Screen2"></Action>
+    <Step Name="MainScreen" Controller="MainScreen" StyleSheet="Style\main.css">
+      <Action Name="YandexScreen" NextStep="YandexScreen">
+        
+      </Action>
+      <Action Name="ButtonScreen" NextStep="ButtonScreen">
+        
+      </Action>
     </Step>
     
-    <Step Name="Screen2" Controller="SecondScreen" StyleSheet="Style\main.css">
-      <Action Name="Forward" NextStep="Screen1"></Action>
-    </Step>
-  
     
       
-
+    <Step Name="YandexScreen" Controller="YandexScreen" StyleSheet="Style\main.css"> 
+    </Step>
   
-
-    <Step Name="TestStep" Controller="MainScreen" StyleSheet="Style\main.css">
-      <Action Name="Button" NextStep="Screen3"></Action>
+    <Step Name="ButtonScreen" Controller="ButtonScreen" StyleSheet="Style\main.css">
     </Step>
-
-    <Step Name="Screen3" Controller="ThirdScreen" StyleSheet="Style\main.css">
-      <Action Name="Button" NextStep="TestStep"></Action>
-    </Step>
-    
-
+   
   </Workflow>
 
   

@@ -59,10 +59,10 @@ namespace Test
             {
                 case "MainScreen":
                     return new MainScreen();
-                case "SecondScreen":
-                    return new SecondScreen();
-                case "ThirdScreen":
-                    return new ThirdScreen();
+                case "YandexScreen":
+                    return new YandexScreen();
+                case "ButtonScreen":
+                    return new ButtonScreen();
                 default:
                     throw new Exception(String.Format("Invalid controller name: {0}", name));
             }

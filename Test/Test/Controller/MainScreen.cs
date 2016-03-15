@@ -8,42 +8,27 @@ namespace Test
 {
     public class MainScreen : Screen
     {
-        Button syncButton;
+   
 
         public override void OnLoading()
         {
             var vl = new VerticalLayout();
 
-            syncButton = new Button();
-            syncButton.OnClick += SyncButton_OnClick;
-
-            vl.AddChild(syncButton);
-            vl.AddChild(new Button("Make new photo", MakePhotoButton_OnClick));
+            vl.AddChild(new Button("Test Buttons", ButtonScreenTest_OnClick));
+            vl.AddChild(new Button("Make Yandex Photos", MakePhotoButton_OnClick));
             vl.AddChild(new Button("Web Request", MakeWebRequest_OnClick));
+
+     
             vl.AddChild(new Button("Exit", ExitButton_OnClick));
-            vl.AddChild(new Button("TestThirdScreen", TestThirdScreenButton_OnClick));
+
             AddChild(vl);
         }
 
-        public override void OnShow()
-        {
-            UpdateSyncButton();
-        }
 
-        private void UpdateSyncButton()
-        {
-            syncButton.Text = String.Format("Sync {0} photos", DB.GetCountOfUnsyncedPhotos());
-        }
-
-        void SyncButton_OnClick(object sender, EventArgs e)
-        {
-            YandexPhoto.SyncPhotos();
-            UpdateSyncButton();
-        }
 
         void MakePhotoButton_OnClick(object sender, EventArgs e)
         {
-            BusinessProcess.DoAction("Forward");
+            BusinessProcess.DoAction("YandexScreen");
         }
 
 
@@ -71,9 +56,9 @@ namespace Test
         }
 
 
-        void TestThirdScreenButton_OnClick(object sender, EventArgs e)
+        void ButtonScreenTest_OnClick(object sender, EventArgs e)
         {
-            BusinessProcess.DoAction("Button");
+            BusinessProcess.DoAction("ButtonScreen");
         }
     }
 }
