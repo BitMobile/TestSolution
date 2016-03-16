@@ -24,17 +24,14 @@ namespace Test
             vl.AddChild(new Button("Back", back_OnClick));
             
         }
-
         public override void OnShow()
         {
             UpdateSyncButton();
         }
-
         private void UpdateSyncButton()
         {
             syncButton.Text = String.Format("Sync {0} yandex photos", DB.GetCountOfUnsyncedPhotos());
         }
-
         void SyncButton_OnClick(object sender, EventArgs e)
         {
             YandexPhoto.SyncPhotos();

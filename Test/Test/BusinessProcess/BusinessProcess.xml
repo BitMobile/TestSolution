@@ -7,7 +7,9 @@
     <Action Name="ButtonScreen" NextStep="ButtonScreen">  </Action>
     <Action Name="CheckBoxScreen" NextStep="CheckBoxScreen">  </Action>
     <Action Name="SomeControlsScreen" NextStep="SomeControlsScreen"> </Action>
-      <Action Name="VerticalLayoutScreen" NextStep="VerticalLayoutScreen"></Action>
+    <Action Name="VerticalLayoutScreen" NextStep="VerticalLayoutScreen"></Action>
+    <Action Name="HorizontalLayoutScreen" NextStep="HorizontalLayoutScreen"></Action>
+   
     </Step>
     
     
@@ -16,9 +18,10 @@
   <Step Name="ButtonScreen" Controller="ButtonScreen" StyleSheet="Style\main.css">  </Step>
   <Step Name="CheckBoxScreen" Controller="CheckBoxScreen" StyleSheet="Style\main.css">  </Step>
   <Step Name="SomeControlsScreen" Controller="SomeControlsScreen" StyleSheet="Style\main.css">  </Step>
-  <Step Name="VerticalLayoutScreen" Controller="VerticalLayoutScreen" StyleSheet="Style\main.css">  </Step>
+  <Step Name="VerticalLayoutScreen" Controller="VerticalLayoutScreen" StyleSheet="Style\main.css"> </Step>
+    <Step Name="HorizontalLayoutScreen" Controller="HorizontalLayoutScreen" StyleSheet="Style\main.css">  </Step>
+ 
   </Workflow>
 
-  
 
 </BusinessProcess>

@@ -10,11 +10,7 @@ namespace Test
         {
             initialize();
         }
-      
-        void Back_OnClick(object sender, EventArgs e)
-        {
-            BusinessProcess.DoBack();
-        }   
+
         void initialize()
         {
             var vl = new VerticalLayout();
@@ -26,11 +22,16 @@ namespace Test
 
             vl.AddChild(new Button("Change Visibility Of VL2", ChangeVisibilityOfVL2_OnClick));
             vl.AddChild(new Button("Change CSS Of VL2", ChangeCSSofVL2_OnClick));
-            vl.AddChild(new Button("Back3", Back_OnClick));
+            vl.AddChild(new Button("Back", Back_OnClick));
+
             vl.AddChild(vl2);
 
             vl2.AddChild(new TextView("ALLOHA VL2"));
         }
+        void Back_OnClick(object sender, EventArgs e)
+        {
+            BusinessProcess.DoBack();
+        }        
         void Vl2_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
@@ -59,6 +60,5 @@ namespace Test
                 vl2.Refresh();
             }
         }
-      
     }
 }

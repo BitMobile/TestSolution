@@ -13,6 +13,24 @@ namespace Test
             initialize();
         }
 
+        void initialize()
+        {
+            var vl = new VerticalLayout();
+            AddChild(vl);
+
+            invisibleButton = new Button { Text = "HIDE ME", Visible = false };
+            invisibleButton.OnClick += Visible_OnClick;
+
+            cssButton = new Button();
+            cssButton.CssClass = "CssButton";
+            cssButton.Text = "CssButton";
+            cssButton.OnClick += ChangeCssAndText_OnClick;
+
+            vl.AddChild(new Button("Unhide Button", Visible_OnClick));
+            vl.AddChild(invisibleButton);
+            vl.AddChild(cssButton);
+            vl.AddChild(new Button("Back", Back_OnClick));
+        }
         void Visible_OnClick(object sender, EventArgs e)
         {
             if (invisibleButton.Visible == true)
@@ -44,23 +62,6 @@ namespace Test
                 cssButton.Refresh();
             }         
         }
-        void initialize()
-        {
-            var vl = new VerticalLayout();
-            AddChild(vl);
-            
-            invisibleButton = new Button { Text = "HIDE ME", Visible = false };
-            invisibleButton.OnClick += Visible_OnClick;
-
-            cssButton = new Button();
-            cssButton.CssClass = "CssButton";
-            cssButton.Text = "CssButton";        
-            cssButton.OnClick += ChangeCssAndText_OnClick;
-                   
-            vl.AddChild(new Button("Unhide Button", Visible_OnClick));
-            vl.AddChild(invisibleButton);
-            vl.AddChild(cssButton);
-            vl.AddChild(new Button("Back", Back_OnClick));
-        }  
+       
     }
 }

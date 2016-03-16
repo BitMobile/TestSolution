@@ -52,7 +52,6 @@ namespace Test
             vl.AddChild(new Button("Change Check Status", ChangeCheckStatus_OnClick));
             vl.AddChild(new Button("Back", Back_OnClick));
         }
-
         void Visible_OnClick(object sender, EventArgs e)
         {
             if (invisibleCheckBox.Visible == true)

@@ -7,7 +7,6 @@ namespace Test
     {
         HorizontalLine horizontalLine;
         TextView textView;
-
         public override void OnLoading()
         {
             initialize();

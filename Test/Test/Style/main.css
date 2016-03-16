@@ -89,6 +89,7 @@ CssTextView {
 	height: 6mm;
 	color: #eee;
 	background-color: #a4ae08;
+     border-style: solid;
 	font-size: 80%;
 	padding-top: 10%;
     margin-top:2%;  

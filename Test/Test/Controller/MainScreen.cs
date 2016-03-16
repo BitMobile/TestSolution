@@ -14,6 +14,20 @@ namespace Test
             initialize();
         }
 
+        private void initialize()
+        {
+            var vl = new VerticalLayout();
+            vl.AddChild(new Button("Buttons", ButtonScreen_OnClick));
+            vl.AddChild(new Button("CheckBox", CheckBoxScreen_OnClick));
+            vl.AddChild(new Button("SomeControls", SomeControlsScreen_OnClick));
+            vl.AddChild(new Button("VerticalLayout", VerticalLayoutScreen_OnClick));
+            vl.AddChild(new Button("HorizontalLayout", HorizontalLayoutScreen_OnClick));
+            vl.AddChild(new Button("Screen", ScreenScreen_OnClick));
+            vl.AddChild(new Button("Make Yandex Photos", YandexScreen_OnClick));
+            vl.AddChild(new Button("Web Request", MakeWebRequest_OnClick));
+            vl.AddChild(new Button("Exit", ExitButton_OnClick));
+            AddChild(vl);
+        }
         void YandexScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("YandexScreen");
@@ -43,32 +57,27 @@ namespace Test
         {
             BusinessProcess.DoAction("CheckBoxScreen");
         }
+        void SomeControlsScreen_OnClick(object sender, EventArgs e)
+        {
+            BusinessProcess.DoAction("SomeControlsScreen");
+        }
         void VerticalLayoutScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("VerticalLayoutScreen");
         }
-        void SomeControlsScreen_OnClick(object sender, EventArgs e)
+        void HorizontalLayoutScreen_OnClick (object sender, EventArgs e)
         {
-            BusinessProcess.DoAction("SomeControlsScreen");
+           BusinessProcess.DoAction("HorizontalLayoutScreen");
+        }
+        void ScreenScreen_OnClick (object sender, EventArgs e)
+        {
+            BusinessProcess.DoAction("ScreenScreen");
         }
         void ExitButton_OnClick(object sender, EventArgs e)
         {
 
             Application.Terminate();
 
-        }
-        private void initialize ()
-        {
-            var vl = new VerticalLayout();
-            vl.AddChild(new Button("Buttons", ButtonScreen_OnClick));
-            vl.AddChild(new Button("CheckBox", CheckBoxScreen_OnClick));
-            vl.AddChild(new Button("SomeControls", SomeControlsScreen_OnClick));
-            vl.AddChild(new Button("VerticalLayout", VerticalLayoutScreen_OnClick));
-
-            vl.AddChild(new Button("Make Yandex Photos", YandexScreen_OnClick));
-            vl.AddChild(new Button("Web Request", MakeWebRequest_OnClick));
-            vl.AddChild(new Button("Exit", ExitButton_OnClick));
-            AddChild(vl);
-        }
+        }       
     }
 }
