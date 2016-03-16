@@ -3,26 +3,20 @@
   <Workflow Name="Main">
     
     <Step Name="MainScreen" Controller="MainScreen" StyleSheet="Style\main.css">
-      <Action Name="YandexScreen" NextStep="YandexScreen">  
-      </Action>
-      <Action Name="ButtonScreen" NextStep="ButtonScreen">       
-      </Action>
-      <Action Name="CheckBoxScreen" NextStep="CheckBoxScreen">
-      </Action>
-    <Action Name="SomeControlsScreen" NextStep="SomeControlsScreen">
-    </Action>
+    <Action Name="YandexScreen" NextStep="YandexScreen">  </Action>
+    <Action Name="ButtonScreen" NextStep="ButtonScreen">  </Action>
+    <Action Name="CheckBoxScreen" NextStep="CheckBoxScreen">  </Action>
+    <Action Name="SomeControlsScreen" NextStep="SomeControlsScreen"> </Action>
+      <Action Name="VerticalLayoutScreen" NextStep="VerticalLayoutScreen"></Action>
     </Step>
     
     
       
-    <Step Name="YandexScreen" Controller="YandexScreen" StyleSheet="Style\main.css"> 
-    </Step>
-    <Step Name="ButtonScreen" Controller="ButtonScreen" StyleSheet="Style\main.css">   
-    </Step>
-    <Step Name="CheckBoxScreen" Controller="CheckBoxScreen" StyleSheet="Style\main.css">
-    </Step>
-  <Step Name="SomeControlsScreen" Controller="SomeControlsScreen" StyleSheet="Style\main.css">
-    </Step>
+  <Step Name="YandexScreen" Controller="YandexScreen" StyleSheet="Style\main.css">  </Step>
+  <Step Name="ButtonScreen" Controller="ButtonScreen" StyleSheet="Style\main.css">  </Step>
+  <Step Name="CheckBoxScreen" Controller="CheckBoxScreen" StyleSheet="Style\main.css">  </Step>
+  <Step Name="SomeControlsScreen" Controller="SomeControlsScreen" StyleSheet="Style\main.css">  </Step>
+  <Step Name="VerticalLayoutScreen" Controller="VerticalLayoutScreen" StyleSheet="Style\main.css">  </Step>
   </Workflow>
 
   

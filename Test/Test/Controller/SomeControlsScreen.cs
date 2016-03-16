@@ -6,6 +6,7 @@ namespace Test
     public class SomeControlsScreen : Screen
     {
         HorizontalLine horizontalLine;
+        TextView textView;
 
         public override void OnLoading()
         {
@@ -20,13 +21,22 @@ namespace Test
             horizontalLine = new HorizontalLine();
             horizontalLine.Visible = true;
             horizontalLine.CssClass = "HorizontalLine";
-            //horizontalLine.Refresh();
+
+            textView = new TextView();
+            textView.Visible = true;
+            textView.CssClass = "TextView";
+            textView.Text = "THIS IS TEST OF TEXTVIEW";
+
 
 
             vl.AddChild(new Button("Change Css Of HL", ChangeCSSofHL_OnClick));
-        
             vl.AddChild(horizontalLine);
             vl.AddChild(new Button("Change Visibility Of HL", ChangeVisibilityOfHL_OnClick));
+            vl.AddChild(new HorizontalLine { });
+            vl.AddChild(new Button("Change Css Of TextView", ChangeCssOfTextView_OnClick));
+            vl.AddChild(textView);
+            vl.AddChild(new Button("Change Visibility Of TextView", ChangeVisibilityOfTextView_OnClick));
+            vl.AddChild(new Button("Change Text Of TextView", ChangeTextOfTextView_OnClick));
             vl.AddChild(new Button("Back", Back_OnClick));
         }
         void Back_OnClick(object sender, EventArgs e)
@@ -61,6 +71,43 @@ namespace Test
                 horizontalLine.Visible = true;
             }
 
+        }
+        void ChangeCssOfTextView_OnClick(object sender, EventArgs e)
+        {
+            if (textView.CssClass == "TextView")
+            {
+                textView.CssClass = "CssTextView";
+
+                textView.Refresh();
+            }
+            else if (textView.CssClass == "CssTextView")
+            {
+                textView.CssClass = "TextView";
+
+                textView.Refresh();
+            }
+        }
+        void ChangeVisibilityOfTextView_OnClick(object sender, EventArgs e)
+        {
+            if (textView.Visible == true)
+            {
+                textView.Visible = false;
+            }
+            else if (textView.Visible == false)
+            {
+                textView.Visible = true;
+            }
+        }
+        void ChangeTextOfTextView_OnClick(object sender, EventArgs e)
+        {
+            if (textView.Text == "THIS IS TEST OF TEXTVIEW")
+            {
+                textView.Text = "ВО ПОЛЕ БЕРЁЗА СТОЯЛА";
+            }
+            else if (textView.Text == "ВО ПОЛЕ БЕРЁЗА СТОЯЛА")
+            {
+                textView.Text = "THIS IS TEST OF TEXTVIEW";
+            }
         }
     }
 }
