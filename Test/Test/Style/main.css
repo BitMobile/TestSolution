@@ -13,6 +13,14 @@ vl
     /*background-image:url(Image\black_background.jpg);*/ 
 } 
 
+hl {
+	width: 100%;
+	height: 100%;
+    background-color:#ff0000;
+
+}
+
+
 Button 
 { 
     width:50%; 
@@ -102,3 +110,19 @@ CssVerticalLayout{
     margin-top: 10%;
    background-color:#2c3fc7; 
 }
+
+HorizontalLayout {
+	width: 25%;
+	height: 10%;
+    margin-top: 10%;
+    background-color:#ff0000;
+
+}
+
+CssHorizontalLayout{
+    width: 100%;
+    height: 18%;
+    margin-top: 10%;
+   background-color:#2c3fc7; 
+}
+

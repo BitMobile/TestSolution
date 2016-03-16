@@ -22,7 +22,7 @@ namespace Test
             vl.AddChild(new Button("SomeControls", SomeControlsScreen_OnClick));
             vl.AddChild(new Button("VerticalLayout", VerticalLayoutScreen_OnClick));
             vl.AddChild(new Button("HorizontalLayout", HorizontalLayoutScreen_OnClick));
-            vl.AddChild(new Button("Screen", ScreenScreen_OnClick));
+            vl.AddChild(new Button("Image", ImageScreen_OnClick));
             vl.AddChild(new Button("Make Yandex Photos", YandexScreen_OnClick));
             vl.AddChild(new Button("Web Request", MakeWebRequest_OnClick));
             vl.AddChild(new Button("Exit", ExitButton_OnClick));
@@ -69,9 +69,9 @@ namespace Test
         {
            BusinessProcess.DoAction("HorizontalLayoutScreen");
         }
-        void ScreenScreen_OnClick (object sender, EventArgs e)
+        void ImageScreen_OnClick(object sender, EventArgs e)
         {
-            BusinessProcess.DoAction("ScreenScreen");
+            BusinessProcess.DoAction("ImageScreen");
         }
         void ExitButton_OnClick(object sender, EventArgs e)
         {
