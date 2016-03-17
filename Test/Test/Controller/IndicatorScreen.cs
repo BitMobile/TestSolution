@@ -6,15 +6,15 @@ namespace Test
 {
     public class IndicatorScreen : Screen
     {
-        private Indicator invisibleIndicator;
         private Indicator cssIndicator;
+        private Indicator invisibleIndicator;
 
         public override void OnLoading()
         {
             Initialize();
         }
 
-        void Initialize()
+        private void Initialize()
         {
             var vl = new VerticalLayout();
             AddChild(vl);
@@ -27,8 +27,6 @@ namespace Test
             cssIndicator.Visible = true;
             cssIndicator.Id = "ID Of Css Indicator";
 
-
-
             vl.AddChild(new Button("Hide invisibleIndicator", Visible_OnClick));
             vl.AddChild(invisibleIndicator);
             vl.AddChild(new Button("Change Css Of Indicator", ChangeCssIndicator_OnClick));
@@ -39,17 +37,17 @@ namespace Test
         }
 
 
-        void Back_OnClick(object sender, EventArgs e)
+        private void Back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
         }
 
-        void Visible_OnClick(object sender, EventArgs e)
+        private void Visible_OnClick(object sender, EventArgs e)
         {
             if (invisibleIndicator.Visible)
             {
                 invisibleIndicator.Visible = false;
-                DConsole.WriteLine(String.Format(cssIndicator.Id));
+                DConsole.WriteLine(string.Format(cssIndicator.Id));
             }
             else if (invisibleIndicator.Visible == false)
             {
@@ -57,7 +55,7 @@ namespace Test
             }
         }
 
-        void ChangeCssIndicator_OnClick(object sender, EventArgs e)
+        private void ChangeCssIndicator_OnClick(object sender, EventArgs e)
         {
             if (cssIndicator.CssClass == "Indicator")
             {
@@ -73,13 +71,13 @@ namespace Test
             }
         }
 
-        void Start_OnClick(object sender, EventArgs e)
+        private void Start_OnClick(object sender, EventArgs e)
         {
             invisibleIndicator.Start();
             cssIndicator.Start();
         }
 
-        void Stop_OnClick(object sender, EventArgs e)
+        private void Stop_OnClick(object sender, EventArgs e)
         {
             cssIndicator.Stop();
             invisibleIndicator.Stop();

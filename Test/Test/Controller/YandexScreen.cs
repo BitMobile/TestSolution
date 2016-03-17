@@ -1,6 +1,7 @@
 ﻿using System;
 using BitMobile.ClientModel3;
 using BitMobile.ClientModel3.UI;
+using Test.Model.Document;
 
 namespace Test
 {
@@ -32,21 +33,21 @@ namespace Test
 
         private void UpdateSyncButton()
         {
-            syncButton.Text = String.Format("Sync {0} yandex photos", DB.GetCountOfUnsyncedPhotos());
+            syncButton.Text = string.Format("Sync {0} yandex photos", DB.GetCountOfUnsyncedPhotos());
         }
 
-        void SyncButton_OnClick(object sender, EventArgs e)
+        private void SyncButton_OnClick(object sender, EventArgs e)
         {
             YandexPhoto.SyncPhotos();
             UpdateSyncButton();
         }
 
-        void btn_OnClick(object sender, EventArgs e)
+        private void btn_OnClick(object sender, EventArgs e)
         {
             Guid id = Guid.NewGuid();
-            String fileName = String.Format("shared/{0}", id.ToString());
+            String fileName = string.Format("shared/{0}", id);
             Camera.MakeSnapshot(fileName, 500,
-                delegate(object sender2, EventArgs e2)
+                delegate (object sender2, EventArgs e2)
                 {
                     Test.Model.Document.Photos photo = new Model.Document.Photos();
                     photo.Id = id;
@@ -56,7 +57,7 @@ namespace Test
                 );
         }
 
-        void back_OnClick(object sender, EventArgs e)
+        private void back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
         }

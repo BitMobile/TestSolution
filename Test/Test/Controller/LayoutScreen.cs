@@ -10,7 +10,7 @@ namespace Test
             Initialize();
         }
 
-        void Initialize()
+        private void Initialize()
         {
             var vl = new VerticalLayout();
             AddChild(vl);
@@ -21,23 +21,22 @@ namespace Test
             vl.AddChild(new Button("Back", Back_OnClick));
         }
 
-
-        void Back_OnClick(object sender, EventArgs e)
+        private void Back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
         }
 
-        void VerticalLayoutScreen_OnClick(object sender, EventArgs e)
+        private void VerticalLayoutScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("VerticalLayoutScreen");
         }
 
-        void HorizontalLayoutScreen_OnClick(object sender, EventArgs e)
+        private void HorizontalLayoutScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("HorizontalLayoutScreen");
         }
 
-        void DockLayoutScreen_OnClick(object sender, EventArgs e)
+        private void DockLayoutScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("DockLayoutScreen");
         }

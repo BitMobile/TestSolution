@@ -7,19 +7,19 @@ namespace Test
     {
         private EditText autoEditText;
         private EditText defaultEditText;
-        private EditText numericEditText;
         private EditText emailEditText;
-        private EditText urlEditText;
-        private EditText phoneEditText;
+        private EditText numericEditText;
         private EditText onGetFocusEditText;
         private EditText onLostFocusEditText;
+        private EditText phoneEditText;
+        private EditText urlEditText;
 
         public override void OnLoading()
         {
             initialize();
         }
 
-        void initialize()
+        private void initialize()
         {
             var vl = new VerticalLayout();
             AddChild(vl);
@@ -33,7 +33,6 @@ namespace Test
             onGetFocusEditText = new EditText();
             onLostFocusEditText = new EditText();
 
-
             autoEditText.CssClass = "EditText";
             defaultEditText.CssClass = "EditText";
             numericEditText.CssClass = "EditText";
@@ -43,14 +42,12 @@ namespace Test
             onGetFocusEditText.CssClass = "EditText";
             onLostFocusEditText.CssClass = "EditText";
 
-
             autoEditText.Keyboard = "auto";
             defaultEditText.Keyboard = "default";
             numericEditText.Keyboard = "numeric";
             emailEditText.Keyboard = "email";
             urlEditText.Keyboard = "url";
             phoneEditText.Keyboard = "phone";
-
 
             autoEditText.Text = "Auto Edit Text";
             defaultEditText.Text = "Default Edit Text";
@@ -67,7 +64,6 @@ namespace Test
             onGetFocusEditText.OnGetFocus += Back_OnClick;
             onLostFocusEditText.OnLostFocus += Back_OnClick;
 
-
             vl.AddChild(autoEditText);
             vl.AddChild(defaultEditText);
             vl.AddChild(numericEditText);
@@ -80,7 +76,7 @@ namespace Test
         }
 
 
-        void Back_OnClick(object sender, EventArgs e)
+        private void Back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
         }

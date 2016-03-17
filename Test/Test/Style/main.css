@@ -109,6 +109,7 @@ CssVerticalLayout{
     height: 20%;
     margin-top: 10%;
    background-color:#2c3fc7; 
+   background-image:url(Image\cats.jpg);
 }
 
 HorizontalLayout {

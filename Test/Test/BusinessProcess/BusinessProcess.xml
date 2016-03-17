@@ -22,7 +22,7 @@
       <Action Name="VerticalLayoutScreen" NextStep="VerticalLayoutScreen"></Action>
       <Action Name="HorizontalLayoutScreen" NextStep="HorizontalLayoutScreen"></Action>
       <Action Name="DockLayoutScreen" NextStep="DockLayoutScreen"></Action>
-      
+
     </Step>
     <Step Name="VerticalLayoutScreen" Controller="VerticalLayoutScreen" StyleSheet="Style\main.css"> </Step>
     <Step Name="HorizontalLayoutScreen" Controller="HorizontalLayoutScreen" StyleSheet="Style\main.css">  </Step>

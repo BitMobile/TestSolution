@@ -6,15 +6,15 @@ namespace Test
 {
     public class HorizontalLayoutScreen : Screen
     {
-        HorizontalLayout hl;
-        TextView textView;
+        private HorizontalLayout hl;
+        private TextView textView;
 
         public override void OnLoading()
         {
             Initialize();
         }
 
-        void Initialize()
+        private void Initialize()
         {
             var vl = new VerticalLayout();
             AddChild(vl);
@@ -23,7 +23,6 @@ namespace Test
             hl.CssClass = "HorizontalLayout";
             hl.OnClick += Hl_OnClick;
             hl.Id = "ID Of Horizontal Layout";
-
 
             textView = new TextView();
             textView.Text = "В онклик лейаута задана функция DoBack";
@@ -43,18 +42,17 @@ namespace Test
             BusinessProcess.DoBack();
         }
 
-        void Back_OnClick(object sender, EventArgs e)
+        private void Back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
         }
 
-        void ChangeVisibilityOfHL2_OnClick(object sender, EventArgs e)
+        private void ChangeVisibilityOfHL2_OnClick(object sender, EventArgs e)
         {
             if (hl.Visible)
             {
                 hl.Visible = false;
-                DConsole.WriteLine(String.Format(hl.Id));
-
+                DConsole.WriteLine(string.Format(hl.Id));
             }
             else if (hl.Visible == false)
             {
@@ -62,7 +60,7 @@ namespace Test
             }
         }
 
-        void ChangeCSSofHL2_OnClick(object sender, EventArgs e)
+        private void ChangeCSSofHL2_OnClick(object sender, EventArgs e)
         {
             if (hl.CssClass == "HorizontalLayout")
             {

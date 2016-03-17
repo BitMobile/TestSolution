@@ -1,6 +1,4 @@
-﻿using System;
-
-using BitMobile.ClientModel3;
+﻿using BitMobile.ClientModel3;
 
 namespace Test
 {

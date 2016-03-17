@@ -6,8 +6,8 @@ namespace Test
 {
     public class ButtonScreen : Screen
     {
-        Button invisibleButton;
-        Button cssButton;
+        private Button cssButton;
+        private Button invisibleButton;
 
 
         public override void OnLoading()
@@ -15,7 +15,7 @@ namespace Test
             Initialize();
         }
 
-        void Initialize()
+        private void Initialize()
         {
             var vl = new VerticalLayout();
             AddChild(vl);
@@ -28,7 +28,6 @@ namespace Test
             cssButton.Text = "CssButton";
             cssButton.OnClick += ChangeCssAndText_OnClick;
             cssButton.Id = "Id Of Invisible Button";
-            
 
             vl.AddChild(new Button("Unhide Button", Visible_OnClick));
             vl.AddChild(invisibleButton);
@@ -36,12 +35,12 @@ namespace Test
             vl.AddChild(new Button("Back", Back_OnClick));
         }
 
-        void Visible_OnClick(object sender, EventArgs e)
+        private void Visible_OnClick(object sender, EventArgs e)
         {
             if (invisibleButton.Visible)
             {
                 invisibleButton.Visible = false;
-                DConsole.WriteLine(String.Format(cssButton.Id));
+                DConsole.WriteLine(string.Format(cssButton.Id));
             }
             else if (invisibleButton.Visible == false)
             {
@@ -49,12 +48,12 @@ namespace Test
             }
         }
 
-        void Back_OnClick(object sender, EventArgs e)
+        private void Back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
         }
 
-        void ChangeCssAndText_OnClick(object sender, EventArgs e)
+        private void ChangeCssAndText_OnClick(object sender, EventArgs e)
         {
             if (cssButton.CssClass == "CssButton")
             {

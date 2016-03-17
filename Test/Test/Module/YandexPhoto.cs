@@ -1,50 +1,51 @@
-﻿using System;
-
+﻿using System.IO;
+using System.Xml;
 using BitMobile.ClientModel3;
+using XmlDocument = BitMobile.ClientModel3.XmlDocument;
 
 namespace Test
 {
     public class YandexPhoto
     {
-        private static String token = "63b7ea6bd442484093dc4d507a8aa951";
-        private static string login = "original-nick";
+        private static readonly string token = "63b7ea6bd442484093dc4d507a8aa951";
+        private static readonly string login = "original-nick";
 
         public static void SyncPhotos()
         {
             var rst = DB.GetUnsyncedPhotos();
             while (rst.Next())
             {
-                String id = rst["Id"].ToString();
-                String fileName = rst["FileName"].ToString();
-                String link = UploadFile(FileSystem.GetFileStream(fileName));
+                var id = rst["Id"].ToString();
+                var fileName = rst["FileName"].ToString();
+                var link = UploadFile(FileSystem.GetFileStream(fileName));
 
-                if (!String.IsNullOrEmpty(link))
+                if (!string.IsNullOrEmpty(link))
                 {
                     DB.MarkPhotoAsSynced(id, link);
                     FileSystem.DeleteFile(fileName);
 
-                    DConsole.WriteLine(String.Format("Photo file {0} has been successfully uploaded", fileName));
+                    DConsole.WriteLine(string.Format("Photo file {0} has been successfully uploaded", fileName));
                 }
             }
         }
 
-        private static String UploadFile(System.IO.Stream fs)
+        private static string UploadFile(Stream fs)
         {
-            HttpRequest req = new HttpRequest("http://api-fotki.yandex.ru");
+            var req = new HttpRequest("http://api-fotki.yandex.ru");
             req.ContentType = "image/jpeg";
-            req.AddHeader("Authorization", String.Format("OAuth {0}", token));
-            String result = req.Post(String.Format("/api/users/{0}/photos/", login), fs);
+            req.AddHeader("Authorization", string.Format("OAuth {0}", token));
+            var result = req.Post(string.Format("/api/users/{0}/photos/", login), fs);
             if (req.Status != 200)
             {
                 DConsole.WriteLine(req.Error);
                 return null;
             }
 
-            XmlDocument doc = new XmlDocument();
+            var doc = new XmlDocument();
             doc.LoadXml(result);
 
             var nodes = doc.DocumentElement.ChildNodes;
-            foreach (System.Xml.XmlNode node in nodes)
+            foreach (XmlNode node in nodes)
             {
                 if (node.Name.Equals("link"))
                     if (node.Attributes["rel"].Value.Equals("self"))

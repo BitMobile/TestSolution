@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Text;
 using System.Net;
+using System.Text;
 using BitMobile.ClientModel3;
 using BitMobile.ClientModel3.UI;
 
@@ -30,64 +29,61 @@ namespace Test
             AddChild(vl);
         }
 
-        void YandexScreen_OnClick(object sender, EventArgs e)
+        private void YandexScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("YandexScreen");
         }
 
-        void MakeWebRequest_OnClick(object sender, EventArgs e)
+        private void MakeWebRequest_OnClick(object sender, EventArgs e)
         {
-            WebRequest req = WebRequest.Create("http://bitmobile1.bt/bitmobileX/platform/device/GetClientMetadata");
-            DConsole.WriteLine(String.Format("Web Request Created"));
-            string svcCredentials =
+            var req = WebRequest.Create("http://bitmobile1.bt/bitmobileX/platform/device/GetClientMetadata");
+            DConsole.WriteLine("Web Request Created");
+            var svcCredentials =
                 Convert.ToBase64String(Encoding.ASCII.GetBytes("fm" + ":" + "fm"));
             req.Headers.Add("Authorization", "Basic " + svcCredentials);
-
-            DConsole.WriteLine(String.Format("Headers added"));
-
-            using (WebResponse resp = req.GetResponse())
+            DConsole.WriteLine("Headers added");
+            using (var resp = req.GetResponse())
             {
             }
-
-            DConsole.WriteLine(String.Format("The response is received"));
+            DConsole.WriteLine("The response is received");
         }
 
-        void ButtonScreen_OnClick(object sender, EventArgs e)
+        private void ButtonScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("ButtonScreen");
         }
 
-        void CheckBoxScreen_OnClick(object sender, EventArgs e)
+        private void CheckBoxScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("CheckBoxScreen");
         }
 
-        void SomeControlsScreen_OnClick(object sender, EventArgs e)
+        private void SomeControlsScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("SomeControlsScreen");
         }
 
-        void LayoutScreen_OnClick(object sender, EventArgs e)
+        private void LayoutScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("LayoutScreen");
         }
 
-        void ImageScreen_OnClick(object sender, EventArgs e)
+        private void ImageScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("ImageScreen");
         }
 
-        void EditTextScreen_OnClick(object sender, EventArgs e)
+        private void EditTextScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("EditTextScreen");
         }
 
-        void IndicatorScreen_OnClick(object sender, EventArgs e)
+        private void IndicatorScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("IndicatorScreen");
         }
 
-        void ExitButton_OnClick(object sender, EventArgs e)
+        private void ExitButton_OnClick(object sender, EventArgs e)
         {
             Application.Terminate();
         }

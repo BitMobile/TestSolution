@@ -8,9 +8,9 @@ namespace Test
     {
         private EditText cssEditText;
         private EditText invisibeEditText;
+        private EditText notEnabledEditText;
         private EditText placeholderEditText;
         private EditText textEditText;
-        private EditText notEnabledEditText;
 
 
         public override void OnLoading()
@@ -28,12 +28,10 @@ namespace Test
             invisibeEditText.Visible = true;
             invisibeEditText.Text = "PLEASE HIDE ME";
 
-
             cssEditText = new EditText();
             cssEditText.CssClass = "EditText";
             cssEditText.Text = "CHANGE MY CSS";
             cssEditText.Id = "ID Of Css EditText";
-
 
             textEditText = new EditText();
             textEditText.CssClass = "EditText";
@@ -49,7 +47,6 @@ namespace Test
             notEnabledEditText.Text = "NOT ENABLED EDIT TEXT";
             notEnabledEditText.Enabled = false;
             notEnabledEditText.CssClass = "EditText";
-
 
             vl.AddChild(new Button("Unhide Button", Visible_OnClick));
             vl.AddChild(new Button("Change CSS Of EditText", ChangeCssEditText_OnClick));
@@ -75,7 +72,7 @@ namespace Test
             if (invisibeEditText.Visible)
             {
                 invisibeEditText.Visible = false;
-                DConsole.WriteLine(String.Format(cssEditText.Id));
+                DConsole.WriteLine(string.Format(cssEditText.Id));
             }
             else if (invisibeEditText.Visible == false)
             {
@@ -88,13 +85,11 @@ namespace Test
             if (cssEditText.CssClass == "EditText")
             {
                 cssEditText.CssClass = "CssEditText";
-
                 cssEditText.Refresh();
             }
             else if (cssEditText.CssClass == "CssEditText")
             {
                 cssEditText.CssClass = "EditText";
-
                 cssEditText.Refresh();
             }
         }

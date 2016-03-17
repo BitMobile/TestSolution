@@ -6,15 +6,15 @@ namespace Test
 {
     public class VerticalLayoutScreen : Screen
     {
-        VerticalLayout vl2;
         private TextView textView;
+        private VerticalLayout vl2;
 
         public override void OnLoading()
         {
             Initialize();
         }
 
-        void Initialize()
+        private void Initialize()
         {
             var vl = new VerticalLayout();
             AddChild(vl);
@@ -23,7 +23,6 @@ namespace Test
             vl2.CssClass = "vl";
             vl2.OnClick += Vl2_OnClick;
             vl2.Id = "ID Of Second Vertical Layout";
-
 
             textView = new TextView();
             textView.Text = "В онклик лейаута задана функция DoBack";
@@ -37,23 +36,22 @@ namespace Test
             vl2.AddChild(new TextView("ALLOHA VL2"));
         }
 
-        void Back_OnClick(object sender, EventArgs e)
+        private void Back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
         }
 
-        void Vl2_OnClick(object sender, EventArgs e)
+        private void Vl2_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
         }
 
-        void ChangeVisibilityOfVL2_OnClick(object sender, EventArgs e)
+        private void ChangeVisibilityOfVL2_OnClick(object sender, EventArgs e)
         {
-            if (vl2.Visible )
+            if (vl2.Visible)
             {
                 vl2.Visible = false;
-                DConsole.WriteLine(String.Format(vl2.Id));
-
+                DConsole.WriteLine(string.Format(vl2.Id));
             }
             else if (vl2.Visible == false)
             {
@@ -61,7 +59,7 @@ namespace Test
             }
         }
 
-        void ChangeCSSofVL2_OnClick(object sender, EventArgs e)
+        private void ChangeCSSofVL2_OnClick(object sender, EventArgs e)
         {
             if (vl2.CssClass == "vl")
             {

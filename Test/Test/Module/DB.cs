@@ -1,6 +1,4 @@
-﻿using System;
-
-using BitMobile.ClientModel3;
+﻿using BitMobile.ClientModel3;
 
 namespace Test
 {
@@ -8,7 +6,7 @@ namespace Test
     {
         public static void Init()
         {
-            Database db = new Database();
+            var db = new Database();
             if (!db.Exists)
             {
                 DConsole.WriteLine("DB is creating...");
@@ -17,14 +15,13 @@ namespace Test
             }
         }
 
-        public static String GetCountOfUnsyncedPhotos()
+        public static string GetCountOfUnsyncedPhotos()
         {
             var qry = new Query("SELECT COUNT(*) AS Cnt FROM _Document_Photos WHERE Link IS NULL");
             var rst = qry.Execute();
             if (rst.Next())
                 return rst["Cnt"].ToString();
-            else
-                return "0";
+            return "0";
         }
 
         public static DbRecordset GetUnsyncedPhotos()
@@ -32,7 +29,7 @@ namespace Test
             return new Query("SELECT Id, FileName FROM _Document_Photos WHERE Link IS NULL").Execute();
         }
 
-        public static void MarkPhotoAsSynced(String id, String link)
+        public static void MarkPhotoAsSynced(string id, string link)
         {
             var qry = new Query("UPDATE _Document_Photos SET Link = @Link WHERE Id = @Id");
             qry.AddParameter("Id", id);
