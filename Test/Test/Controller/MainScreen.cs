@@ -19,10 +19,11 @@ namespace Test
             var vl = new VerticalLayout();
             vl.AddChild(new Button("Buttons", ButtonScreen_OnClick));
             vl.AddChild(new Button("CheckBox", CheckBoxScreen_OnClick));
-            vl.AddChild(new Button("SomeControls", SomeControlsScreen_OnClick));
+            vl.AddChild(new Button("HorizontalLine And TextView", SomeControlsScreen_OnClick));
             vl.AddChild(new Button("VerticalLayout", VerticalLayoutScreen_OnClick));
             vl.AddChild(new Button("HorizontalLayout", HorizontalLayoutScreen_OnClick));
             vl.AddChild(new Button("Image", ImageScreen_OnClick));
+            vl.AddChild(new Button("EditText", EditTextScreen_OnClick));
             vl.AddChild(new Button("Make Yandex Photos", YandexScreen_OnClick));
             vl.AddChild(new Button("Web Request", MakeWebRequest_OnClick));
             vl.AddChild(new Button("Exit", ExitButton_OnClick));
@@ -72,6 +73,10 @@ namespace Test
         void ImageScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("ImageScreen");
+        }
+        void EditTextScreen_OnClick(object sender, EventArgs e)
+        {
+            BusinessProcess.DoAction("EditTextScreen");
         }
         void ExitButton_OnClick(object sender, EventArgs e)
         {

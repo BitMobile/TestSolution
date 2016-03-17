@@ -71,8 +71,10 @@ namespace Test
                 //    return new VerticalLayoutScreen();
                 //case "HorizontalLayoutScreen":
                 //    return new HorizontalLayoutScreen();
-                case "ImageScreen":
-                    return new ImageScreen();
+                //case "ImageScreen":
+                //    return new ImageScreen();
+                case "EditTextScreen":
+                    return new EditTextScreen();
                 default:
                     throw new Exception(String.Format("Invalid controller name: {0}", name));
             }

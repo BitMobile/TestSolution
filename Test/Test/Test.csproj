@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Controller\CheckBoxScreen.cs" />
     <Compile Include="Controller\ButtonScreen.cs" />
+    <Compile Include="Controller\EditTextScreen.cs" />
     <Compile Include="Controller\ImageScreen.cs" />
     <Compile Include="Controller\SomeControlsScreen.cs" />
     <Compile Include="Controller\HorizontalLayoutScreen.cs" />

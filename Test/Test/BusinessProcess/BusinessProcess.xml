@@ -10,7 +10,8 @@
     <Action Name="VerticalLayoutScreen" NextStep="VerticalLayoutScreen"></Action>
     <Action Name="HorizontalLayoutScreen" NextStep="HorizontalLayoutScreen"></Action>
       <Action Name="ImageScreen" NextStep="ImageScreen"></Action>
-   
+      <Action Name="EditTextScreen" NextStep="EditTextScreen"></Action>
+      
     </Step>
     
     
@@ -22,6 +23,7 @@
   <Step Name="VerticalLayoutScreen" Controller="VerticalLayoutScreen" StyleSheet="Style\main.css"> </Step>
     <Step Name="HorizontalLayoutScreen" Controller="HorizontalLayoutScreen" StyleSheet="Style\main.css">  </Step>
  <Step Name="ImageScreen" Controller="ImageScreen" StyleSheet="Style\main.css"></Step>
+    <Step Name="EditTextScreen" Controller="EditTextScreen" StyleSheet="Style\main.css"></Step>
   </Workflow>
 
 
