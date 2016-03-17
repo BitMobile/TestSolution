@@ -59,9 +59,12 @@
     <Compile Include="Controller\ButtonScreen.cs" />
     <Compile Include="Controller\EditTextScreen.cs" />
     <Compile Include="Controller\ImageScreen.cs" />
+    <Compile Include="Controller\IndicatorScreen.cs" />
+    <Compile Include="Controller\LayoutScreen.cs" />
     <Compile Include="Controller\SecondEditTextScreen.cs" />
     <Compile Include="Controller\SomeControlsScreen.cs" />
     <Compile Include="Controller\HorizontalLayoutScreen.cs" />
+    <Compile Include="Controller\DockLayoutScreen.cs" />
     <Compile Include="Controller\VerticalLayoutScreen.cs" />
     <Compile Include="Module\BusinessProcess.cs" />
     <Compile Include="Controller\YandexScreen.cs" />

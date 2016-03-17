@@ -66,7 +66,7 @@ namespace Test
 
             onGetFocusEditText.OnGetFocus += Back_OnClick;
             onLostFocusEditText.OnLostFocus += Back_OnClick;
-            
+
 
             vl.AddChild(autoEditText);
             vl.AddChild(defaultEditText);

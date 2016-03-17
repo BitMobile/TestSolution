@@ -1,4 +1,5 @@
 ﻿using System;
+using BitMobile.ClientModel3;
 using BitMobile.ClientModel3.UI;
 
 namespace Test
@@ -7,6 +8,7 @@ namespace Test
     {
         HorizontalLine horizontalLine;
         TextView textView;
+
         public override void OnLoading()
         {
             Initialize();
@@ -20,29 +22,33 @@ namespace Test
             horizontalLine = new HorizontalLine();
             horizontalLine.Visible = true;
             horizontalLine.CssClass = "HorizontalLine";
+            horizontalLine.Id = "ID Of Horizontal Line";
+
 
             textView = new TextView();
             textView.Visible = true;
             textView.CssClass = "TextView";
             textView.Text = "THIS IS TEST OF TEXTVIEW";
+            textView.Id = "ID Of TextView";
 
 
 
             vl.AddChild(new Button("Change Css Of HL", ChangeCSSofHL_OnClick));
             vl.AddChild(horizontalLine);
             vl.AddChild(new Button("Change Visibility Of HL", ChangeVisibilityOfHL_OnClick));
-            vl.AddChild(new HorizontalLine { });
+            vl.AddChild(new HorizontalLine {});
             vl.AddChild(new Button("Change Css Of TextView", ChangeCssOfTextView_OnClick));
             vl.AddChild(textView);
             vl.AddChild(new Button("Change Visibility Of TextView", ChangeVisibilityOfTextView_OnClick));
             vl.AddChild(new Button("Change Text Of TextView", ChangeTextOfTextView_OnClick));
             vl.AddChild(new Button("Back", Back_OnClick));
         }
+
         void Back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
-
         }
+
         void ChangeCSSofHL_OnClick(object sender, EventArgs e)
         {
             if (horizontalLine.CssClass == "HorizontalLine")
@@ -57,20 +63,21 @@ namespace Test
 
                 horizontalLine.Refresh();
             }
-
         }
+
         void ChangeVisibilityOfHL_OnClick(object sender, EventArgs e)
         {
-            if (horizontalLine.Visible == true)
+            if (horizontalLine.Visible)
             {
                 horizontalLine.Visible = false;
+                DConsole.WriteLine(String.Format(horizontalLine.Id));
             }
-             else if (horizontalLine.Visible == false)
+            else if (horizontalLine.Visible == false)
             {
                 horizontalLine.Visible = true;
             }
-
         }
+
         void ChangeCssOfTextView_OnClick(object sender, EventArgs e)
         {
             if (textView.CssClass == "TextView")
@@ -86,17 +93,21 @@ namespace Test
                 textView.Refresh();
             }
         }
+
         void ChangeVisibilityOfTextView_OnClick(object sender, EventArgs e)
         {
-            if (textView.Visible == true)
+            if (textView.Visible)
             {
                 textView.Visible = false;
+                DConsole.WriteLine(String.Format(textView.Id));
+
             }
             else if (textView.Visible == false)
             {
                 textView.Visible = true;
             }
         }
+
         void ChangeTextOfTextView_OnClick(object sender, EventArgs e)
         {
             if (textView.Text == "THIS IS TEST OF TEXTVIEW")

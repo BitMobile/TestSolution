@@ -8,26 +8,32 @@
       <Action Name="ButtonScreen" NextStep="ButtonScreen">  </Action>
       <Action Name="CheckBoxScreen" NextStep="CheckBoxScreen">  </Action>
       <Action Name="SomeControlsScreen" NextStep="SomeControlsScreen"> </Action>
-      <Action Name="VerticalLayoutScreen" NextStep="VerticalLayoutScreen"></Action>
-      <Action Name="HorizontalLayoutScreen" NextStep="HorizontalLayoutScreen"></Action>
+      <Action Name="LayoutScreen" NextStep="LayoutScreen"></Action>
       <Action Name="ImageScreen" NextStep="ImageScreen"></Action>
       <Action Name="EditTextScreen" NextStep="EditTextScreen"></Action>
-
+      <Action Name="IndicatorScreen" NextStep="IndicatorScreen"></Action>
     </Step>
-
 
     <Step Name="YandexScreen" Controller="YandexScreen" StyleSheet="Style\main.css">  </Step>
     <Step Name="ButtonScreen" Controller="ButtonScreen" StyleSheet="Style\main.css">  </Step>
     <Step Name="CheckBoxScreen" Controller="CheckBoxScreen" StyleSheet="Style\main.css">  </Step>
     <Step Name="SomeControlsScreen" Controller="SomeControlsScreen" StyleSheet="Style\main.css">  </Step>
+    <Step Name="LayoutScreen" Controller="LayoutScreen" StyleSheet="Style\main.css">
+      <Action Name="VerticalLayoutScreen" NextStep="VerticalLayoutScreen"></Action>
+      <Action Name="HorizontalLayoutScreen" NextStep="HorizontalLayoutScreen"></Action>
+      <Action Name="DockLayoutScreen" NextStep="DockLayoutScreen"></Action>
+      
+    </Step>
     <Step Name="VerticalLayoutScreen" Controller="VerticalLayoutScreen" StyleSheet="Style\main.css"> </Step>
     <Step Name="HorizontalLayoutScreen" Controller="HorizontalLayoutScreen" StyleSheet="Style\main.css">  </Step>
+    <Step Name="DockLayoutScreen" Controller="DockLayoutScreen" StyleSheet="Style\main.css">  </Step>
     <Step Name="ImageScreen" Controller="ImageScreen" StyleSheet="Style\main.css"></Step>
     <Step Name="EditTextScreen" Controller="EditTextScreen" StyleSheet="Style\main.css">
       <Action Name="SecondEditTextScreen" NextStep="SecondEditTextScreen"></Action>
     </Step>
     <Step Name="SecondEditTextScreen" Controller="SecondEditTextScreen" StyleSheet="Style\main.css"></Step>
-    
+    <Step Name="IndicatorScreen" Controller="IndicatorScreen" StyleSheet="Style\main.css"></Step>
+
   </Workflow>
 
 

@@ -59,24 +59,30 @@ namespace Test
             {
                 case "MainScreen":
                     return new MainScreen();
-                case "YandexScreen":
-                    return new YandexScreen();
+//                case "YandexScreen":
+//                    return new YandexScreen();
                 case "ButtonScreen":
                     return new ButtonScreen();
                 case "CheckBoxScreen":
                     return new CheckBoxScreen();
-//                case "SomeControlsScreen":
-//                    return new SomeControlsScreen();
-                //case "VerticalLayoutScreen":
-                //    return new VerticalLayoutScreen();
-                //case "HorizontalLayoutScreen":
-                //    return new HorizontalLayoutScreen();
-                //case "ImageScreen":
-                //    return new ImageScreen();
-                case "EditTextScreen":
-                    return new EditTextScreen();
-                case "SecondEditTextScreen":
-                    return new SecondEditTextScreen();
+                                case "SomeControlsScreen":
+                                    return new SomeControlsScreen();
+                case "LayoutScreen":
+                    return new LayoutScreen();
+                case "VerticalLayoutScreen":
+                    return new VerticalLayoutScreen();
+//                case "HorizontalLayoutScreen":
+//                    return new HorizontalLayoutScreen();
+//                case "DockLayoutScreen":
+//                    return new DockLayoutScreen();
+//                case "ImageScreen":
+//                    return new ImageScreen();
+//                case "EditTextScreen":
+//                    return new EditTextScreen();
+//                case "SecondEditTextScreen":
+//                    return new SecondEditTextScreen();
+//                case "IndicatorScreen":
+//                    return new IndicatorScreen();
                 default:
                     throw new Exception(String.Format("Invalid controller name: {0}", name));
             }

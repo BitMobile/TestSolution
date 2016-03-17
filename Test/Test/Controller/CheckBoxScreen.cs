@@ -1,16 +1,17 @@
 ﻿using System;
+using BitMobile.ClientModel3;
 using BitMobile.ClientModel3.UI;
 
 namespace Test
 {
-    public class CheckBoxScreen: Screen
+    public class CheckBoxScreen : Screen
     {
         CheckBox checkBoxTrue;
         CheckBox checkBoxFalse;
         CheckBox cssCheckBox;
         Button changeCssButton;
         CheckBox invisibleCheckBox;
-       
+
         public override void OnLoading()
         {
             Initialize();
@@ -33,6 +34,7 @@ namespace Test
 
             cssCheckBox = new CheckBox();
             cssCheckBox.CssClass = "CheckBox";
+            cssCheckBox.Id = "Id Of Css CheckBox";
 
             changeCssButton = new Button();
             changeCssButton.CssClass = "CssButton";
@@ -52,27 +54,27 @@ namespace Test
             vl.AddChild(new Button("Change Check Status", ChangeCheckStatus_OnClick));
             vl.AddChild(new Button("Back", Back_OnClick));
         }
+
         void Visible_OnClick(object sender, EventArgs e)
         {
-            if (invisibleCheckBox.Visible == true)
+            if (invisibleCheckBox.Visible)
             {
                 invisibleCheckBox.Visible = false;
+                DConsole.WriteLine(String.Format(cssCheckBox.Id));
             }
             else if (invisibleCheckBox.Visible == false)
             {
-
                 invisibleCheckBox.Visible = true;
             }
         }
+
         void Back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
-
         }
+
         void ChangeCssCheckBox_OnClick(object sender, EventArgs e)
         {
-
-
             if (cssCheckBox.CssClass == "CheckBox")
             {
                 cssCheckBox.CssClass = "CssCheckBox";
@@ -85,8 +87,8 @@ namespace Test
 
                 cssCheckBox.Refresh();
             }
-
         }
+
         void ChangeCheckStatus_OnClick(object sender, EventArgs e)
         {
             if (checkBoxTrue.Checked == false)

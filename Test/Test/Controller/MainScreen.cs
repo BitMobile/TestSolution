@@ -11,31 +11,32 @@ namespace Test
     {
         public override void OnLoading()
         {
-            initialize();
+            Initialize();
         }
 
-        private void initialize()
+        private void Initialize()
         {
             var vl = new VerticalLayout();
             vl.AddChild(new Button("Buttons", ButtonScreen_OnClick));
             vl.AddChild(new Button("CheckBox", CheckBoxScreen_OnClick));
             vl.AddChild(new Button("HorizontalLine And TextView", SomeControlsScreen_OnClick));
-            vl.AddChild(new Button("VerticalLayout", VerticalLayoutScreen_OnClick));
-            vl.AddChild(new Button("HorizontalLayout", HorizontalLayoutScreen_OnClick));
+            vl.AddChild(new Button("Layouts", LayoutScreen_OnClick));
             vl.AddChild(new Button("Image", ImageScreen_OnClick));
             vl.AddChild(new Button("EditText", EditTextScreen_OnClick));
+            vl.AddChild(new Button("Indicator", IndicatorScreen_OnClick));
             vl.AddChild(new Button("Make Yandex Photos", YandexScreen_OnClick));
             vl.AddChild(new Button("Web Request", MakeWebRequest_OnClick));
             vl.AddChild(new Button("Exit", ExitButton_OnClick));
             AddChild(vl);
         }
+
         void YandexScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("YandexScreen");
         }
+
         void MakeWebRequest_OnClick(object sender, EventArgs e)
         {
-
             WebRequest req = WebRequest.Create("http://bitmobile1.bt/bitmobileX/platform/device/GetClientMetadata");
             DConsole.WriteLine(String.Format("Web Request Created"));
             string svcCredentials =
@@ -44,45 +45,51 @@ namespace Test
 
             DConsole.WriteLine(String.Format("Headers added"));
 
-            using (WebResponse resp = req.GetResponse()) { }
+            using (WebResponse resp = req.GetResponse())
+            {
+            }
 
             DConsole.WriteLine(String.Format("The response is received"));
+        }
 
-
-        }     
         void ButtonScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("ButtonScreen");
         }
-        void CheckBoxScreen_OnClick (object sender, EventArgs e)
+
+        void CheckBoxScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("CheckBoxScreen");
         }
+
         void SomeControlsScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("SomeControlsScreen");
         }
-        void VerticalLayoutScreen_OnClick(object sender, EventArgs e)
+
+        void LayoutScreen_OnClick(object sender, EventArgs e)
         {
-            BusinessProcess.DoAction("VerticalLayoutScreen");
+            BusinessProcess.DoAction("LayoutScreen");
         }
-        void HorizontalLayoutScreen_OnClick (object sender, EventArgs e)
-        {
-           BusinessProcess.DoAction("HorizontalLayoutScreen");
-        }
+
         void ImageScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("ImageScreen");
         }
+
         void EditTextScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("EditTextScreen");
         }
+
+        void IndicatorScreen_OnClick(object sender, EventArgs e)
+        {
+            BusinessProcess.DoAction("IndicatorScreen");
+        }
+
         void ExitButton_OnClick(object sender, EventArgs e)
         {
-
             Application.Terminate();
-
-        }       
+        }
     }
 }

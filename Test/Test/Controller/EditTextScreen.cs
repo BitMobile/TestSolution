@@ -1,4 +1,5 @@
 ﻿using System;
+using BitMobile.ClientModel3;
 using BitMobile.ClientModel3.UI;
 
 namespace Test
@@ -26,12 +27,13 @@ namespace Test
             invisibeEditText.CssClass = "EditText";
             invisibeEditText.Visible = true;
             invisibeEditText.Text = "PLEASE HIDE ME";
-            
+
 
             cssEditText = new EditText();
             cssEditText.CssClass = "EditText";
             cssEditText.Text = "CHANGE MY CSS";
-            
+            cssEditText.Id = "ID Of Css EditText";
+
 
             textEditText = new EditText();
             textEditText.CssClass = "EditText";
@@ -47,7 +49,6 @@ namespace Test
             notEnabledEditText.Text = "NOT ENABLED EDIT TEXT";
             notEnabledEditText.Enabled = false;
             notEnabledEditText.CssClass = "EditText";
-
 
 
             vl.AddChild(new Button("Unhide Button", Visible_OnClick));
@@ -74,6 +75,7 @@ namespace Test
             if (invisibeEditText.Visible)
             {
                 invisibeEditText.Visible = false;
+                DConsole.WriteLine(String.Format(cssEditText.Id));
             }
             else if (invisibeEditText.Visible == false)
             {
@@ -125,7 +127,6 @@ namespace Test
         {
             BusinessProcess.DoAction("SecondEditTextScreen");
         }
-
 
         private void Back_OnClick(object sender, EventArgs e)
         {

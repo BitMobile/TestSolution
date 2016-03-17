@@ -7,6 +7,7 @@ namespace Test
     public class YandexScreen : Screen
     {
         Button syncButton;
+
         public override void OnLoading()
         {
             var vl = new VerticalLayout();
@@ -22,21 +23,24 @@ namespace Test
             vl.AddChild(btn);
 
             vl.AddChild(new Button("Back", back_OnClick));
-            
         }
+
         public override void OnShow()
         {
             UpdateSyncButton();
         }
+
         private void UpdateSyncButton()
         {
             syncButton.Text = String.Format("Sync {0} yandex photos", DB.GetCountOfUnsyncedPhotos());
         }
+
         void SyncButton_OnClick(object sender, EventArgs e)
         {
             YandexPhoto.SyncPhotos();
             UpdateSyncButton();
         }
+
         void btn_OnClick(object sender, EventArgs e)
         {
             Guid id = Guid.NewGuid();
@@ -48,10 +52,10 @@ namespace Test
                     photo.Id = id;
                     photo.FileName = fileName;
                     photo.Save();
-                    
                 }
-            );
+                );
         }
+
         void back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
