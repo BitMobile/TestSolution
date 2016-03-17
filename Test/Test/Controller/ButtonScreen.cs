@@ -7,13 +7,14 @@ namespace Test
     {
         Button invisibleButton;
         Button cssButton;
+        
       
         public override void OnLoading()
         {
-            initialize();
+            Initialize();
         }
 
-        void initialize()
+        void Initialize()
         {
             var vl = new VerticalLayout();
             AddChild(vl);
@@ -33,7 +34,7 @@ namespace Test
         }
         void Visible_OnClick(object sender, EventArgs e)
         {
-            if (invisibleButton.Visible == true)
+            if (invisibleButton.Visible)
             {
                 invisibleButton.Visible = false;
             }

@@ -8,10 +8,10 @@ namespace Test
         VerticalLayout vl2;
         public override void OnLoading()
         {
-            initialize();
+            Initialize();
         }
 
-        void initialize()
+        void Initialize()
         {
             var vl = new VerticalLayout();
             AddChild(vl);

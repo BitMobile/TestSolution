@@ -65,8 +65,8 @@ namespace Test
                     return new ButtonScreen();
                 case "CheckBoxScreen":
                     return new CheckBoxScreen();
-                case "SomeControlsScreen":
-                    return new SomeControlsScreen();
+//                case "SomeControlsScreen":
+//                    return new SomeControlsScreen();
                 //case "VerticalLayoutScreen":
                 //    return new VerticalLayoutScreen();
                 //case "HorizontalLayoutScreen":
@@ -75,6 +75,8 @@ namespace Test
                 //    return new ImageScreen();
                 case "EditTextScreen":
                     return new EditTextScreen();
+                case "SecondEditTextScreen":
+                    return new SecondEditTextScreen();
                 default:
                     throw new Exception(String.Format("Invalid controller name: {0}", name));
             }
