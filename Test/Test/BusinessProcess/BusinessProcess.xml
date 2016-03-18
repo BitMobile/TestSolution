@@ -3,7 +3,7 @@
 <BusinessProcess>
   <Workflow Name="Main">
 
-    <Step Name="MainScreen" Controller="MainScreen" StyleSheet="Style\main.css">
+    <Step Name="MainScreen" Controller="MainScreen" StyleSheet="Style\secondary.css">
       <Action Name="YandexScreen" NextStep="YandexScreen">  </Action>
       <Action Name="ButtonScreen" NextStep="ButtonScreen">  </Action>
       <Action Name="CheckBoxScreen" NextStep="CheckBoxScreen">  </Action>
@@ -11,6 +11,7 @@
       <Action Name="LayoutScreen" NextStep="LayoutScreen"></Action>
       <Action Name="ImageScreen" NextStep="ImageScreen"></Action>
       <Action Name="EditTextScreen" NextStep="EditTextScreen"></Action>
+      <Action Name="MemoEditScreen" NextStep="MemoEditScreen"></Action>
       <Action Name="IndicatorScreen" NextStep="IndicatorScreen"></Action>
     </Step>
 
@@ -22,7 +23,6 @@
       <Action Name="VerticalLayoutScreen" NextStep="VerticalLayoutScreen"></Action>
       <Action Name="HorizontalLayoutScreen" NextStep="HorizontalLayoutScreen"></Action>
       <Action Name="DockLayoutScreen" NextStep="DockLayoutScreen"></Action>
-
     </Step>
     <Step Name="VerticalLayoutScreen" Controller="VerticalLayoutScreen" StyleSheet="Style\main.css"> </Step>
     <Step Name="HorizontalLayoutScreen" Controller="HorizontalLayoutScreen" StyleSheet="Style\main.css">  </Step>
@@ -30,8 +30,12 @@
     <Step Name="ImageScreen" Controller="ImageScreen" StyleSheet="Style\main.css"></Step>
     <Step Name="EditTextScreen" Controller="EditTextScreen" StyleSheet="Style\main.css">
       <Action Name="SecondEditTextScreen" NextStep="SecondEditTextScreen"></Action>
+    </Step> 
+    <Step Name="MemoEditScreen" Controller="MemoEditScreen" StyleSheet="Style\main.css">
+      <Action Name="SecondMemoEditScreen" NextStep="SecondMemoEditScreen"></Action>
     </Step>
     <Step Name="SecondEditTextScreen" Controller="SecondEditTextScreen" StyleSheet="Style\main.css"></Step>
+    <Step Name="SecondMemoEditScreen" Controller="SecondMemoEditScreen" StyleSheet="Style\main.css"></Step>
     <Step Name="IndicatorScreen" Controller="IndicatorScreen" StyleSheet="Style\main.css"></Step>
 
   </Workflow>

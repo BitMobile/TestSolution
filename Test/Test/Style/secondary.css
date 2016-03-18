@@ -2,14 +2,14 @@
 { 
     width:100%; 
     height:100%; 
-    background-color:#ff0000; 
+    background-color:#00AF64; 
 } 
 
 vl 
 {
     width:100%; 
     height:100%; 
-     background-color:#9659B1; 
+     background-color:#BDF400; 
     /*background-image:url(Image\black_background.jpg);*/ 
 } 
 
@@ -25,7 +25,7 @@ Button
 { 
     width:75%; 
     height:6%; 
-    background-color:#50325D; 
+    background-color:#00AF6D; 
     color:#F2E9F6;
     margin-top:2%;
     margin-left:13%;
@@ -35,7 +35,7 @@ CssButton
 { 
     width:50%; 
     height:10%; 
-    background-color:#7b68ee; 
+    background-color:#FFAA00; 
     color:#c6e2ff;
     margin-top:2%;
     margin-left:25%;
@@ -46,7 +46,7 @@ ChangeCssButton
 { 
     width:25%; 
     height:10%; 
-    background-color:#008b8b; 
+    background-color:#4013AF; 
     color:#ffe1ff;
     margin-top:2%;
      margin-left:37%;

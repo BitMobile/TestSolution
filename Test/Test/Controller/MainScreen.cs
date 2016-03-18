@@ -22,6 +22,7 @@ namespace Test
             vl.AddChild(new Button("Layouts", LayoutScreen_OnClick));
             vl.AddChild(new Button("Image", ImageScreen_OnClick));
             vl.AddChild(new Button("EditText", EditTextScreen_OnClick));
+            vl.AddChild(new Button("MemoEdit", MemoEditScreen_OnClick));
             vl.AddChild(new Button("Indicator", IndicatorScreen_OnClick));
             vl.AddChild(new Button("Make Yandex Photos", YandexScreen_OnClick));
             vl.AddChild(new Button("Web Request", MakeWebRequest_OnClick));
@@ -76,6 +77,11 @@ namespace Test
         private void EditTextScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("EditTextScreen");
+        }
+
+        private void MemoEditScreen_OnClick(object sender, EventArgs e)
+        {
+            BusinessProcess.DoAction("MemoEditScreen");
         }
 
         private void IndicatorScreen_OnClick(object sender, EventArgs e)

@@ -66,12 +66,12 @@ namespace Test
                     return new ButtonScreen();
                 case "CheckBoxScreen":
                     return new CheckBoxScreen();
-                case "SomeControlsScreen":
-                    return new SomeControlsScreen();
-//                case "LayoutScreen":
-//                    return new LayoutScreen();
-//                case "VerticalLayoutScreen":
-//                    return new VerticalLayoutScreen();
+//                case "SomeControlsScreen":
+//                    return new SomeControlsScreen();
+                //                case "LayoutScreen":
+                //                    return new LayoutScreen();
+                //                case "VerticalLayoutScreen":
+                //                    return new VerticalLayoutScreen();
                 //                case "HorizontalLayoutScreen":
                 //                    return new HorizontalLayoutScreen();
                 //                case "DockLayoutScreen":
@@ -80,12 +80,16 @@ namespace Test
                 //                    return new ImageScreen();
                 //                case "EditTextScreen":
                 //                    return new EditTextScreen();
+                case "MemoEditScreen":
+                    return new MemoEditScreen();
+                case "SecondMemoEditScreen":
+                    return new SecondMemoEditScreen();
                 //                case "SecondEditTextScreen":
                 //                    return new SecondEditTextScreen();
                 //                case "IndicatorScreen":
                 //                    return new IndicatorScreen();
-                case "YandexScreen":
-                    return new YandexScreen();
+                //                case "YandexScreen":
+                //                    return new YandexScreen();
                 default:
                     throw new Exception(string.Format("Invalid controller name: {0}", name));
             }
