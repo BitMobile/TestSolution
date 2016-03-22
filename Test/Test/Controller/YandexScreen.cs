@@ -1,7 +1,10 @@
 ﻿using System;
 using BitMobile.ClientModel3;
 using BitMobile.ClientModel3.UI;
+<<<<<<< HEAD
 using Test.Model.Document;
+=======
+>>>>>>> refs/remotes/origin/master
 
 namespace Test
 {

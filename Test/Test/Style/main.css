@@ -31,7 +31,11 @@ Button
     margin-left:13%;
      text-align: center;
 }
+<<<<<<< HEAD
 CssButton
+=======
+.CssButton
+>>>>>>> refs/remotes/origin/master
 { 
     width:50%; 
     height:10%; 
@@ -42,7 +46,11 @@ CssButton
      text-align: center;
 }
 
+<<<<<<< HEAD
 ChangeCssButton
+=======
+.ChangeCssButton
+>>>>>>> refs/remotes/origin/master
 { 
     width:25%; 
     height:10%; 
@@ -53,28 +61,44 @@ ChangeCssButton
      text-align: center;
 }
 
+<<<<<<< HEAD
 CheckBox {
+=======
+.CheckBox {
+>>>>>>> refs/remotes/origin/master
 	width: 50%;
 	height: 10%;
     margin-top:2%;   
      margin-left:25%;
 }
 
+<<<<<<< HEAD
 CssCheckBox {
+=======
+.CssCheckBox {
+>>>>>>> refs/remotes/origin/master
 	width: 50%;
 	height: 10%;
     margin-top:2%;   
      margin-left:50%;
 }
 
+<<<<<<< HEAD
 HorizontalLine {
+=======
+.HorizontalLine {
+>>>>>>> refs/remotes/origin/master
     margin-top:2%;  
   height: 10px;
 	width: 100%;
 	background-color: #3f8764;
 }
 
+<<<<<<< HEAD
 CssHorizontalLine{
+=======
+.CssHorizontalLine{
+>>>>>>> refs/remotes/origin/master
        margin-top:2%;
   height: 20px;
 	width: 100%;
@@ -82,7 +106,11 @@ CssHorizontalLine{
 
 }
 
+<<<<<<< HEAD
 TextView {
+=======
+.TextView {
+>>>>>>> refs/remotes/origin/master
 	width: 100%;
 	height: 5mm;
 	color: #000;
@@ -92,7 +120,11 @@ TextView {
     margin-top:2%;  
     text-align: center;
 }
+<<<<<<< HEAD
 CssTextView {
+=======
+.CssTextView {
+>>>>>>> refs/remotes/origin/master
 	width: 100%;
 	height: 6mm;
 	color: #eee;
@@ -102,9 +134,16 @@ CssTextView {
 	padding-top: 10%;
     margin-top:2%;  
     text-align: center;
+<<<<<<< HEAD
 }
 
 CssVerticalLayout{
+=======
+  
+}
+
+.CssVerticalLayout{
+>>>>>>> refs/remotes/origin/master
     width: 50%;
     height: 20%;
     margin-top: 10%;
@@ -112,7 +151,11 @@ CssVerticalLayout{
    background-image:url(Image\cats.jpg);
 }
 
+<<<<<<< HEAD
 HorizontalLayout {
+=======
+.HorizontalLayout {
+>>>>>>> refs/remotes/origin/master
 	width: 25%;
 	height: 10%;
     margin-top: 10%;
@@ -120,14 +163,22 @@ HorizontalLayout {
 
 }
 
+<<<<<<< HEAD
 CssHorizontalLayout{
+=======
+.CssHorizontalLayout{
+>>>>>>> refs/remotes/origin/master
     width: 100%;
     height: 18%;
     margin-top: 10%;
    background-color:#2c3fc7; 
 }
 
+<<<<<<< HEAD
 Image {
+=======
+.Image {
+>>>>>>> refs/remotes/origin/master
     width: 50%;
 	height: 0%;
 		margin-left: 10%;
@@ -136,7 +187,11 @@ Image {
 		margin-bottom: 10%;
 	}
 
+<<<<<<< HEAD
 CssImage {
+=======
+.CssImage {
+>>>>>>> refs/remotes/origin/master
     width: 100%;
 	height: 0%;
 		margin-left: 20%;
@@ -145,7 +200,11 @@ CssImage {
 		margin-bottom: 20%;
 	}
 
+<<<<<<< HEAD
 EditText {
+=======
+.EditText {
+>>>>>>> refs/remotes/origin/master
 	width: 100%;
 	height: 5mm;
         margin-top:2%;
@@ -156,7 +215,11 @@ EditText {
 	placeholder-color: #8b7765;
 }
 
+<<<<<<< HEAD
 CssEditText {
+=======
+.CssEditText {
+>>>>>>> refs/remotes/origin/master
     
     width: 100%;
 	height: 5mm;
@@ -168,18 +231,27 @@ CssEditText {
 	placeholder-color: #470d6f;
 }
 
+<<<<<<< HEAD
 Indicator {
+=======
+.Indicator {
+>>>>>>> refs/remotes/origin/master
 	color: #FF8C00;
 	height: 10mm;
 	width: 10mm;
 }
 
+<<<<<<< HEAD
 CssIndicator {
+=======
+.CssIndicator {
+>>>>>>> refs/remotes/origin/master
 	color: #0a3a6d;
 	height: 20mm;
 	width: 20mm;
 }
 
+<<<<<<< HEAD
 DockLayout {
 width: 100%;
 	height: 10%;
@@ -188,6 +260,23 @@ width: 100%;
 	}
 
 MemoEdit {
+=======
+.DockLayout {
+width:100%;
+ height:100%; 
+ background-image:url(Image\cats.jpg);
+	}
+
+.DockLayout2 {
+width:50%;
+ height:50%; 
+ background-image:url(Image\cats.jpg);
+	}
+
+
+
+.MemoEdit {
+>>>>>>> refs/remotes/origin/master
 	width: 100%;
 	height: 5mm;
         margin-top:2%;
@@ -198,7 +287,11 @@ MemoEdit {
 	placeholder-color: #ffffff;
 }
 
+<<<<<<< HEAD
 CssMemoEdit {
+=======
+.CssMemoEdit {
+>>>>>>> refs/remotes/origin/master
     
     width: 100%;
 	height: 5mm;
@@ -208,4 +301,11 @@ CssMemoEdit {
 	font-size: 80%;
 	padding-top: 10%;
 	placeholder-color: #470d6f;
+<<<<<<< HEAD
+=======
+}
+
+.cats {
+     width:50%; height:50%; margin-left:25%; margin-top:25%; background-color:#00ff00;
+>>>>>>> refs/remotes/origin/master
 }

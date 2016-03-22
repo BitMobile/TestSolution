@@ -8,16 +8,29 @@ namespace Test
     {
         private Button cssButton;
         private Button invisibleButton;
+<<<<<<< HEAD
 
 
         public override void OnLoading()
         {
+=======
+        private Button newButton;
+        private VerticalLayout vl;
+
+        public override void OnLoading()
+        {
+
+>>>>>>> refs/remotes/origin/master
             Initialize();
         }
 
         private void Initialize()
         {
+<<<<<<< HEAD
             var vl = new VerticalLayout();
+=======
+            vl = new VerticalLayout();
+>>>>>>> refs/remotes/origin/master
             AddChild(vl);
 
             invisibleButton = new Button {Text = "HIDE ME", Visible = false};
@@ -30,11 +43,19 @@ namespace Test
             cssButton.Id = "Id Of Invisible Button";
 
             vl.AddChild(new Button("Unhide Button", Visible_OnClick));
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
             vl.AddChild(invisibleButton);
             vl.AddChild(cssButton);
             vl.AddChild(new Button("Back", Back_OnClick));
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
         private void Visible_OnClick(object sender, EventArgs e)
         {
             if (invisibleButton.Visible)
@@ -48,6 +69,12 @@ namespace Test
             }
         }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> refs/remotes/origin/master
         private void Back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
@@ -69,4 +96,8 @@ namespace Test
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> refs/remotes/origin/master

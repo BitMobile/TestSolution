@@ -58,6 +58,7 @@ namespace Test
 
         private static Screen GetScreenByControllerName(string name)
         {
+<<<<<<< HEAD
             switch (name)
             {
                 case "MainScreen":
@@ -96,3 +97,11 @@ namespace Test
         }
     }
 }
+=======
+            return Screen.CreateScreen("Test." + name); 
+            //full type name should be specified 
+                                          
+            }
+        }
+    }
+>>>>>>> refs/remotes/origin/master

@@ -27,6 +27,10 @@ namespace Test
             vl.AddChild(new Button("Make Yandex Photos", YandexScreen_OnClick));
             vl.AddChild(new Button("Web Request", MakeWebRequest_OnClick));
             vl.AddChild(new Button("Exit", ExitButton_OnClick));
+<<<<<<< HEAD
+=======
+       
+>>>>>>> refs/remotes/origin/master
             AddChild(vl);
         }
 
@@ -71,6 +75,10 @@ namespace Test
 
         private void ImageScreen_OnClick(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+            
+>>>>>>> refs/remotes/origin/master
             BusinessProcess.DoAction("ImageScreen");
         }
 
@@ -93,5 +101,7 @@ namespace Test
         {
             Application.Terminate();
         }
+
+       
     }
 }

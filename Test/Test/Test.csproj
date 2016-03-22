@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Controller\CheckBoxScreen.cs" />
     <Compile Include="Controller\ButtonScreen.cs" />
     <Compile Include="Controller\MemoEditScreen.cs" />
@@ -70,6 +71,24 @@
     <Compile Include="Controller\VerticalLayoutScreen.cs" />
     <Compile Include="Module\BusinessProcess.cs" />
     <Compile Include="Controller\YandexScreen.cs" />
+=======
+    <Compile Include="Controller\ButtonScreen.cs" />
+    <Compile Include="Controller\CheckBoxScreen.cs" />
+    <Compile Include="Controller\DockLayoutScreen.cs" />
+    <Compile Include="Controller\EditTextScreen.cs" />
+    <Compile Include="Controller\HorizontalLayoutScreen.cs" />
+    <Compile Include="Controller\ImageScreen.cs" />
+    <Compile Include="Controller\IndicatorScreen.cs" />
+    <Compile Include="Controller\LayoutScreen.cs" />
+    <Compile Include="Controller\MemoEditScreen.cs" />
+    <Compile Include="Controller\SecondEditTextScreen.cs" />
+    <Compile Include="Controller\SecondMemoEditScreen.cs" />
+    <Compile Include="Controller\SomeControlsScreen.cs" />
+    <Compile Include="Controller\TestHorizontalLayoutScreen.cs" />
+    <Compile Include="Controller\VerticalLayoutScreen.cs" />
+    <Compile Include="Controller\YandexScreen.cs" />
+    <Compile Include="Module\BusinessProcess.cs" />
+>>>>>>> refs/remotes/origin/master
     <Compile Include="Controller\MainScreen.cs" />
     <Compile Include="Module\DB.cs" />
     <Compile Include="Model\Document.Photos.cs">
@@ -107,8 +126,13 @@
     <EmbeddedResource Include="Image\cats.jpg" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="Image\black_background.jpg" />
     <EmbeddedResource Include="Style\secondary.css" />
+=======
+    <EmbeddedResource Include="Style\second.css" />
+    <EmbeddedResource Include="Style\polev.css" />
+>>>>>>> refs/remotes/origin/master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

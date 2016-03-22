@@ -17,6 +17,10 @@ namespace Test
 
             vl.AddChild(new Button("VerticalLayout", VerticalLayoutScreen_OnClick));
             vl.AddChild(new Button("HorizontalLayout", HorizontalLayoutScreen_OnClick));
+<<<<<<< HEAD
+=======
+            vl.AddChild(new Button("TestHorizontalLayoutScreen", TestHorizontalLayoutScreen_OnClick));
+>>>>>>> refs/remotes/origin/master
             vl.AddChild(new Button("DockLayout", DockLayoutScreen_OnClick));
             vl.AddChild(new Button("Back", Back_OnClick));
         }
@@ -36,6 +40,14 @@ namespace Test
             BusinessProcess.DoAction("HorizontalLayoutScreen");
         }
 
+<<<<<<< HEAD
+=======
+        private void TestHorizontalLayoutScreen_OnClick(object sender, EventArgs e)
+        {
+            BusinessProcess.DoAction("TestHorizontalLayoutScreen");
+        }
+
+>>>>>>> refs/remotes/origin/master
         private void DockLayoutScreen_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoAction("DockLayoutScreen");

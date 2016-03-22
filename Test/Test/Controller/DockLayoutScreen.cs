@@ -16,6 +16,7 @@ namespace Test
 
         private void Initialize()
         {
+<<<<<<< HEAD
             var vl = new VerticalLayout();
             AddChild(vl);
 
@@ -31,6 +32,27 @@ namespace Test
             //отображается только две текствьюхи
             dl.AddChild(new TextView("ALLOHA DL3"));
             dl.AddChild(new TextView("ALLOHA DL4"));
+=======
+            //var vl = new VerticalLayout();
+            //AddChild(vl);
+
+            dl = new DockLayout();
+            dl.Id = "ID Of DockLayout";
+            dl.OnClick += dl_OnClick;
+
+            AddChild(dl);
+            //vl.AddChild(new Button("Change Visibility Of DL", ChangeVisibilityOfDL_OnClick));
+            //vl.AddChild(new Button("Back", Back_OnClick));
+            //vl.AddChild(dl);
+
+            //dl.AddChild(new TextView("ALLOHA DL"));
+            //dl.AddChild(new TextView("ALLOHA DL2"));
+
+            //отображается только две текствьюхи
+
+            //dl.AddChild(new TextView("ALLOHA DL3"));
+            //dl.AddChild(new TextView("ALLOHA DL4"));
+>>>>>>> refs/remotes/origin/master
         }
 
         private void Back_OnClick(object sender, EventArgs e)
@@ -38,6 +60,15 @@ namespace Test
             BusinessProcess.DoBack();
         }
 
+<<<<<<< HEAD
+=======
+        private void dl_OnClick(object sender, EventArgs e)
+        {
+            var dl = (DockLayout) sender;
+            dl.CssClass = "DockLayout2";
+            dl.Refresh();
+        }
+>>>>>>> refs/remotes/origin/master
 
         private void ChangeVisibilityOfDL_OnClick(object sender, EventArgs e)
         {

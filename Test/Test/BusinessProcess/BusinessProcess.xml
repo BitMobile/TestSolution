@@ -3,7 +3,11 @@
 <BusinessProcess>
   <Workflow Name="Main">
 
+<<<<<<< HEAD
     <Step Name="MainScreen" Controller="MainScreen" StyleSheet="Style\secondary.css">
+=======
+    <Step Name="MainScreen" Controller="MainScreen" StyleSheet="Style\second.css">
+>>>>>>> refs/remotes/origin/master
       <Action Name="YandexScreen" NextStep="YandexScreen">  </Action>
       <Action Name="ButtonScreen" NextStep="ButtonScreen">  </Action>
       <Action Name="CheckBoxScreen" NextStep="CheckBoxScreen">  </Action>
@@ -23,6 +27,10 @@
       <Action Name="VerticalLayoutScreen" NextStep="VerticalLayoutScreen"></Action>
       <Action Name="HorizontalLayoutScreen" NextStep="HorizontalLayoutScreen"></Action>
       <Action Name="DockLayoutScreen" NextStep="DockLayoutScreen"></Action>
+<<<<<<< HEAD
+=======
+      <Action Name="TestHorizontalLayoutScreen" NextStep="TestHorizontalLayoutScreen"></Action>
+>>>>>>> refs/remotes/origin/master
     </Step>
     <Step Name="VerticalLayoutScreen" Controller="VerticalLayoutScreen" StyleSheet="Style\main.css"> </Step>
     <Step Name="HorizontalLayoutScreen" Controller="HorizontalLayoutScreen" StyleSheet="Style\main.css">  </Step>
@@ -30,13 +38,22 @@
     <Step Name="ImageScreen" Controller="ImageScreen" StyleSheet="Style\main.css"></Step>
     <Step Name="EditTextScreen" Controller="EditTextScreen" StyleSheet="Style\main.css">
       <Action Name="SecondEditTextScreen" NextStep="SecondEditTextScreen"></Action>
+<<<<<<< HEAD
     </Step> 
+=======
+    </Step>
+>>>>>>> refs/remotes/origin/master
     <Step Name="MemoEditScreen" Controller="MemoEditScreen" StyleSheet="Style\main.css">
       <Action Name="SecondMemoEditScreen" NextStep="SecondMemoEditScreen"></Action>
     </Step>
     <Step Name="SecondEditTextScreen" Controller="SecondEditTextScreen" StyleSheet="Style\main.css"></Step>
     <Step Name="SecondMemoEditScreen" Controller="SecondMemoEditScreen" StyleSheet="Style\main.css"></Step>
     <Step Name="IndicatorScreen" Controller="IndicatorScreen" StyleSheet="Style\main.css"></Step>
+<<<<<<< HEAD
+=======
+    <Step Name="TestHorizontalLayoutScreen" Controller="TestHorizontalLayoutScreen" StyleSheet="Style\polev.css"></Step>
+  
+>>>>>>> refs/remotes/origin/master
 
   </Workflow>
 

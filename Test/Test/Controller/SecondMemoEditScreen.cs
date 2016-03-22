@@ -40,7 +40,11 @@ namespace Test
             urlMemoEdit.CssClass = "MemoEdit";
             phoneMemoEdit.CssClass = "MemoEdit";
             onGetFocusMemoEdit.CssClass = "MemoEdit";
+<<<<<<< HEAD
             onLostFocusMemoEdit.CssClass = "EditText";
+=======
+            onLostFocusMemoEdit.CssClass = "MemoEdit";
+>>>>>>> refs/remotes/origin/master
 
             autoMemoEdit.Keyboard = "auto";
             defaultMemoEditt.Keyboard = "default";
@@ -75,7 +79,10 @@ namespace Test
             vl.AddChild(new Button("Back", Back_OnClick));
         }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/master
         private void Back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();

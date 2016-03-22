@@ -36,7 +36,10 @@ namespace Test
             vl.AddChild(new Button("Back", Back_OnClick));
         }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/master
         private void Back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();

@@ -26,3 +26,13 @@ C:\Example\Test\Test\bin\Debug\DbEngine.W.dll
 C:\Example\Test\Test\bin\Debug\ILInterpreter.dll
 C:\Example\Test\Test\bin\Debug\Application.W.dll
 C:\Example\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Example2\Example\Test\Test\bin\Debug\Test.dll
+C:\Example2\Example\Test\Test\bin\Debug\Test.pdb
+C:\Example2\Example\Test\Test\bin\Debug\ClientModel3.W.dll
+C:\Example2\Example\Test\Test\bin\Debug\Common.W.dll
+C:\Example2\Example\Test\Test\bin\Debug\DbEngine.W.dll
+C:\Example2\Example\Test\Test\bin\Debug\ILInterpreter.dll
+C:\Example2\Example\Test\Test\bin\Debug\Application.W.dll
+C:\Example2\Example\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Example2\Example\Test\Test\obj\Debug\Test.dll
+C:\Example2\Example\Test\Test\obj\Debug\Test.pdb
