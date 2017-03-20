@@ -10,9 +10,12 @@ namespace Test
         private Button _invisibleButton;
         private Button _newButton;
         private Button _textButton;
-        private VerticalLayout _vl;
+        private VerticalLayout _vl1;
+		private VerticalLayout _vl2;
 
-        private readonly Thread thread = new Thread();
+		private ScrollView _scrollView;
+
+		private readonly Thread thread = new Thread();
 
 
         public override void OnLoading()
@@ -22,11 +25,15 @@ namespace Test
 
         private void Initialize()
         {
-            _vl = new VerticalLayout();
-            AddChild(_vl);
+			_scrollView = new ScrollView();
+			_vl1 = new VerticalLayout();
+			_vl2 = new VerticalLayout();
+            
+			_scrollView.Id = "Id Of ScrollView";
+            _scrollView.OnScroll += ScrollIndex_OnScroll;
 
 
-            var dialog = new Dialog();
+            //var dialog = new Dialog();
             //dialog.Date();
 
 
@@ -43,19 +50,27 @@ namespace Test
             _textButton.Text = "TextButton";
             _textButton.OnClick += ChangeText_OnClick;
             
-            _vl.AddChild(new Button("Unhide Button", Visible_OnClick));
+            _vl1.AddChild(new Button("Unhide Button", Visible_OnClick));
 
-            _vl.AddChild(_invisibleButton);
-            _vl.AddChild(_cssButton);
-            _vl.AddChild(_textButton);
-            _vl.AddChild(new Button("Add New Button, EditText and Image", AddNewButton_OnClick));
-            _vl.AddChild(new Button("Remove", Remove_OnClick));
-            _vl.AddChild(new Button("Test Dialog", AddNewDialog_OnClick));
-            _vl.AddChild(new Button("Back", Back_OnClick));
-            _vl.AddChild(new Button("Wait", Wait_OnClick));
-            _vl.AddChild(new Button("Snackbar", Snackbar_OnClick));
-            _vl.AddChild(new Button("Toast", Toast_OnClick));
-        }
+            _vl1.AddChild(_invisibleButton);
+            _vl1.AddChild(_cssButton);
+            _vl1.AddChild(_textButton);
+            _vl1.AddChild(new Button("Add New Button, EditText and Image", AddNewButton_OnClick));
+            _vl1.AddChild(new Button("Remove", Remove_OnClick));
+            _vl1.AddChild(new Button("Test Dialog", AddNewDialog_OnClick));
+            _vl1.AddChild(new Button("Back", Back_OnClick));
+            _vl1.AddChild(new Button("Wait", Wait_OnClick));
+            _vl1.AddChild(new Button("Snackbar", Snackbar_OnClick));
+            _vl1.AddChild(new Button("Toast", Toast_OnClick));
+			_vl2.AddChild(new Button("OpenValidLink", OpenValidLinkOnClick));
+			_vl2.AddChild(new Button("OpenInvalidLink", OpenInvalidLinkOnClick));
+			_vl2.AddChild(new Button("OpenTwoLink", OpenTwoLinkOnClick));
+
+			_scrollView.AddChild(_vl1);
+			_scrollView.AddChild(_vl2);
+
+			AddChild(_scrollView);
+		}
 
         private void Visible_OnClick(object sender, EventArgs e)
         {
@@ -70,14 +85,50 @@ namespace Test
             }
         }
 
+		private void OpenValidLinkOnClick(object sender, EventArgs e)
+		{
+			try
+			{
+				Application.OpenLink("http://mirror.yandex.ru/archlinux/iso/latest/sha1sums.txt");
+			}
+			catch (Exception exc)
+			{
+				DConsole.WriteLine($"ERROR: {exc}");
+			}
+		}
 
-        private void Wait_OnClick(object sender, EventArgs e)
+		private void OpenInvalidLinkOnClick(object sender, EventArgs e)
+		{
+			try
+			{
+				Application.OpenLink("ItIsNotLink");
+			}
+			catch (Exception exc)
+			{
+				DConsole.WriteLine($"ERROR: {exc}");
+			}
+		}
+
+		private void OpenTwoLinkOnClick(object sender, EventArgs e)
+		{
+			try
+			{
+				Application.OpenLink("https://aur.archlinux.org/cgit/aur.git/snapshot/gnu-apl.tar.gz");
+				Application.OpenLink("https://aur.archlinux.org/cgit/aur.git/snapshot/tilix.tar.gz");
+			}
+			catch (Exception exc)
+			{
+				DConsole.WriteLine($"ERROR: {exc}");
+			}
+		}
+
+		private void Wait_OnClick(object sender, EventArgs e)
         {
             thread.Sleep(3000);
         }
- private void Remove_OnClick(object sender, EventArgs e)
+		private void Remove_OnClick(object sender, EventArgs e)
         {
-            _vl.RemoveChild(5);
+            _vl1.RemoveChild(5);
         }
 
         private void Snackbar_OnClick(object sender, EventArgs e)
@@ -120,10 +171,10 @@ namespace Test
             text.Text = "New EditText";
             var image = new Image();
             image.Source = "Image\\cats.jpg";
-            _vl.AddChild(_newButton);
-            _vl.AddChild(text);
-            _vl.AddChild(image);
-            _vl.Refresh();
+            _vl1.AddChild(_newButton);
+            _vl1.AddChild(text);
+            _vl1.AddChild(image);
+            _vl1.Refresh();
         }
 
         private void ChangeText_OnClick(object sender, EventArgs e)
@@ -144,5 +195,10 @@ namespace Test
             DConsole.WriteLine(string.Empty); // выполняется корректно (пропускается строка)
             DConsole.WriteLine($"{"".Length}"); // выводит 0
         }
-    }
+
+		private void ScrollIndex_OnScroll(object sender, EventArgs e)
+		{
+			DConsole.WriteLine(string.Format(_scrollView.ScrollIndex.ToString()));
+		}
+	}
 }

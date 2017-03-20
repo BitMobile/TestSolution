@@ -78,7 +78,7 @@ namespace Test
         {
             try
             {
-                db.PerformSync(@"http://10.5.195.222/bitmobile/synchro3/device", "srm", "srm", OnSyncComplete,
+                db.PerformSync(@"http://10.5.195.222/bitmobile/synchro3/device", "srm", "srm", TimeSpan.FromSeconds(100), OnSyncComplete,
                     "sync complete");
                 DConsole.WriteLine("DbPerformSync OK!");
             }
@@ -93,7 +93,7 @@ namespace Test
             try
             {
                 if (db.SyncIsActive == false)
-                    db.PerformSyncAsync(@"http://10.5.195.222/bitmobile/synchro2/device", "Sr", "Sr", OnSyncComplete,
+                    db.PerformSyncAsync(@"http://10.5.195.222/bitmobile/synchro2/device", "Sr", "Sr", TimeSpan.FromSeconds(100), OnSyncComplete,
                         "sync complete");
                 DConsole.WriteLine("DbPerformSyncAsync OK!");
             }
@@ -107,7 +107,7 @@ namespace Test
         {
             try
             {
-                db.PerformFullSyncAsync(@"http://192.168.0.152/bitmobile/synchro3/device", "Sr", "Sr", OnSyncComplete,
+                db.PerformFullSyncAsync(@"http://192.168.0.152/bitmobile/synchro3/device", "Sr", "Sr", TimeSpan.FromSeconds(100), OnSyncComplete,
                     "sync complete");
                 DConsole.WriteLine("DbPerformFullSyncAsync OK!");
             }
@@ -121,7 +121,7 @@ namespace Test
         {
             try
             {
-                db.PerformFullSync(@"http://192.168.0.152/bitmobile/synchro2/device", "Sr", "Sr", OnSyncComplete,
+                db.PerformFullSync(@"http://192.168.0.152/bitmobile/synchro2/device", "Sr", "Sr", TimeSpan.FromSeconds(100), OnSyncComplete,
                     "sync complete");
                 DConsole.WriteLine("DbPerformFullSync OK!");
             }
@@ -135,7 +135,7 @@ namespace Test
         {
             try
             {
-                db.PerformFullSync(@"http://192.168.0.152/bitmobile/synchro3/device", "srm", "srm", OnSyncComplete,
+                db.PerformFullSync(@"http://192.168.0.152/bitmobile/synchro3/device", "srm", "srm", TimeSpan.FromSeconds(100), OnSyncComplete,
                     "sync complete");
                 DConsole.WriteLine("DbPerformFullSync OK!");
             }

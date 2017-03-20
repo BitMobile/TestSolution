@@ -14,15 +14,15 @@ namespace Test
         {
             BusinessProcess.Init();
             DConsole.WriteLine(Translator.Translate("greeting"));
-            try
-            {
-                PushNotification.InitializePushService("http://10.5.195.222/bitmobile/synchro3",
-                    "15f3904b-942b-11e5-bb64-f8a963e4bf15", "Sr");
-            }
-            catch (Exception)
-            {
-                DConsole.WriteLine("SOME EXCEPTION");
-            }
+            //try
+            //{
+            //    PushNotification.InitializePushService("http://10.5.195.222/bitmobile/synchro3",
+            //        "15f3904b-942b-11e5-bb64-f8a963e4bf15", "Sr");
+            //}
+            //catch (Exception)
+            //{
+            //    DConsole.WriteLine("SOME EXCEPTION");
+            //}
         }
 
         public override void OnPushMessage(string message)
