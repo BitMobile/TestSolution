@@ -101,7 +101,7 @@ namespace Test
 		{
 			try
 			{
-				Application.OpenLink("ItIsNotLink");
+				Application.OpenLink("/mirror.yandex.ru/archlinux/iso/latest/sha1sums.txt");
 			}
 			catch (Exception exc)
 			{
