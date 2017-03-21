@@ -107,6 +107,7 @@
     <Compile Include="Controller\LayoutScreen.cs" />
     <Compile Include="Controller\MediaPlayerScreen.cs" />
     <Compile Include="Controller\MemoEditScreen.cs" />
+    <Compile Include="Controller\SecondButtonScreen.cs" />
     <Compile Include="Controller\SecondEditTextScreen.cs" />
     <Compile Include="Controller\SecondMemoEditScreen.cs" />
     <Compile Include="Controller\SomeControlsScreen.cs" />

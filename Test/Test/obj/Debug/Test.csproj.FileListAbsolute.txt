@@ -79,4 +79,3 @@ C:\Users\TAV-work\Projects\TestSolution\Test\Test\bin\Debug\System.Net.Http.Exte
 C:\Users\TAV-work\Projects\TestSolution\Test\Test\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\TAV-work\Projects\TestSolution\Test\Test\obj\Debug\Test.dll
 C:\Users\TAV-work\Projects\TestSolution\Test\Test\obj\Debug\Test.pdb
-C:\Users\TAV-work\Projects\TestSolution\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache

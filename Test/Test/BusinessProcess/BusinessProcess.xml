@@ -1,83 +1,85 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <BusinessProcess>
-  <Workflow Name="Main">
+	<Workflow Name="Main">
 
-    <Step Name="MainScreen" Controller="MainScreen" StyleSheet="Style\second.css">
-      <Action Name="YandexScreen" NextStep="YandexScreen">  </Action>
-      <Action Name="ButtonScreen" NextStep="ButtonScreen">  </Action>
-      <Action Name="CheckBoxScreen" NextStep="CheckBoxScreen">  </Action>
-      <Action Name="SomeControlsScreen" NextStep="SomeControlsScreen"> </Action>
-      <Action Name="LayoutScreen" NextStep="LayoutScreen"></Action>
-      <Action Name="ImageScreen" NextStep="ImageScreen"></Action>
-      <Action Name="EditTextScreen" NextStep="EditTextScreen"></Action>
-      <Action Name="MemoEditScreen" NextStep="MemoEditScreen"></Action>
-      <Action Name="IndicatorScreen" NextStep="IndicatorScreen"></Action>
-      <Action Name="MediaPlayerScreen" NextStep="MediaPlayerScreen"></Action>
-      <Action Name="WebScreen" NextStep="WebScreen"></Action>
-      <Action Name="SwipeScreen" NextStep="SwipeScreen"></Action>
-      <Action Name="DatabaseScreen" NextStep="DatabaseScreen"></Action>
-      <Action Name="DialogScreen" NextStep="DialogScreen"></Action>
-      <Action Name="TestXMLScreen" NextStep="TestXMLScreen"></Action>
-      <Action Name="CameraPhoneGpsScreen" NextStep="CameraPhoneGpsScreen"></Action>
-      <Action Name="FileSystemScreen" NextStep="FileSystemScreen"></Action>
-      <Action Name="ComponentScreen" NextStep="ComponentScreen"></Action>
-      <Action Name="TestBugsScreen" NextStep="TestBugsScreen"></Action>
-      <Action Name="ApplicationScreen" NextStep="ApplicationScreen"></Action>
-      <Action Name="PushScreen" NextStep="PushScreen"></Action>
-    </Step>
+		<Step Name="MainScreen" Controller="MainScreen" StyleSheet="Style\second.css">
+			<Action Name="YandexScreen" NextStep="YandexScreen">  </Action>
+			<Action Name="ButtonScreen" NextStep="ButtonScreen">  </Action>
+			<Action Name="CheckBoxScreen" NextStep="CheckBoxScreen">  </Action>
+			<Action Name="SomeControlsScreen" NextStep="SomeControlsScreen"> </Action>
+			<Action Name="LayoutScreen" NextStep="LayoutScreen"></Action>
+			<Action Name="ImageScreen" NextStep="ImageScreen"></Action>
+			<Action Name="EditTextScreen" NextStep="EditTextScreen"></Action>
+			<Action Name="MemoEditScreen" NextStep="MemoEditScreen"></Action>
+			<Action Name="IndicatorScreen" NextStep="IndicatorScreen"></Action>
+			<Action Name="MediaPlayerScreen" NextStep="MediaPlayerScreen"></Action>
+			<Action Name="WebScreen" NextStep="WebScreen"></Action>
+			<Action Name="SwipeScreen" NextStep="SwipeScreen"></Action>
+			<Action Name="DatabaseScreen" NextStep="DatabaseScreen"></Action>
+			<Action Name="DialogScreen" NextStep="DialogScreen"></Action>
+			<Action Name="TestXMLScreen" NextStep="TestXMLScreen"></Action>
+			<Action Name="CameraPhoneGpsScreen" NextStep="CameraPhoneGpsScreen"></Action>
+			<Action Name="FileSystemScreen" NextStep="FileSystemScreen"></Action>
+			<Action Name="ComponentScreen" NextStep="ComponentScreen"></Action>
+			<Action Name="TestBugsScreen" NextStep="TestBugsScreen"></Action>
+			<Action Name="ApplicationScreen" NextStep="ApplicationScreen"></Action>
+			<Action Name="PushScreen" NextStep="PushScreen"></Action>
+			<Action Name="SecondButtonScreen" NextStep="SecondButtonScreen"></Action>
+		</Step>
 
-    <Step Name="YandexScreen" Controller="YandexScreen" StyleSheet="Style\main.css">  </Step>
-    <Step Name="ButtonScreen" Controller="ButtonScreen" StyleSheet="Style\main.css">  </Step>
-    <Step Name="CheckBoxScreen" Controller="CheckBoxScreen" StyleSheet="Style\main.css">  </Step>
-    <Step Name="SomeControlsScreen" Controller="SomeControlsScreen" StyleSheet="Style\main.css">  </Step>
-    <Step Name="LayoutScreen" Controller="LayoutScreen" StyleSheet="Style\main.css">
-      <Action Name="VerticalLayoutScreen" NextStep="VerticalLayoutScreen"></Action>
-      <Action Name="HorizontalLayoutScreen" NextStep="HorizontalLayoutScreen"></Action>
-      <Action Name="DockLayoutScreen" NextStep="DockLayoutScreen"></Action>
-      <Action Name="TestHorizontalLayoutScreen" NextStep="TestHorizontalLayoutScreen"></Action>
-    </Step>
-    <Step Name="VerticalLayoutScreen" Controller="VerticalLayoutScreen" StyleSheet="Style\main.css"> </Step>
-    <Step Name="HorizontalLayoutScreen" Controller="HorizontalLayoutScreen" StyleSheet="Style\main.css">  </Step>
-    <Step Name="TestHorizontalLayoutScreen" Controller="TestHorizontalLayoutScreen" StyleSheet="Style\polev.css"></Step>
-    <Step Name="DockLayoutScreen" Controller="DockLayoutScreen" StyleSheet="Style\main.css">  </Step>
-    <Step Name="ImageScreen" Controller="ImageScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="EditTextScreen" Controller="EditTextScreen" StyleSheet="Style\main.css">
-      <Action Name="SecondEditTextScreen" NextStep="SecondEditTextScreen"></Action>
-    </Step>
-    <Step Name="MemoEditScreen" Controller="MemoEditScreen" StyleSheet="Style\main.css">
-      <Action Name="SecondMemoEditScreen" NextStep="SecondMemoEditScreen"></Action>
-    </Step>
-    <Step Name="SecondEditTextScreen" Controller="SecondEditTextScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="SecondMemoEditScreen" Controller="SecondMemoEditScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="IndicatorScreen" Controller="IndicatorScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="MediaPlayerScreen" Controller="MediaPlayerScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="WebScreen" Controller="WebScreen" StyleSheet="Style\main.css">
-      <Action Name="WebViewScreen" NextStep="WebViewScreen"></Action>
-      <Action Name="WebMapGoogleScreen" NextStep="WebMapGoogleScreen"></Action>
-      <Action Name="WebImageScreen" NextStep="WebImageScreen"></Action>
-    </Step>
-    <Step Name="WebViewScreen" Controller="WebViewScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="WebMapGoogleScreen" Controller="WebMapGoogleScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="WebImageScreen" Controller="WebImageScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="SwipeScreen" Controller="SwipeScreen" StyleSheet="Style\main.css">
-      <Action Name="SwipeHorizontalLayoutScreen" NextStep="SwipeHorizontalLayoutScreen"></Action>
-      <Action Name="SwipeVerticalLayoutScreen" NextStep="SwipeVerticalLayoutScreen"></Action>
-    </Step>
-    <Step Name="SwipeHorizontalLayoutScreen" Controller="SwipeHorizontalLayoutScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="SwipeVerticalLayoutScreen" Controller="SwipeVerticalLayoutScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="DatabaseScreen" Controller="DatabaseScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="DialogScreen" Controller="DialogScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="TestXMLScreen" Controller="TestXMLScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="CameraPhoneGpsScreen" Controller="CameraPhoneGpsScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="FileSystemScreen" Controller="FileSystemScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="ComponentScreen" Controller="ComponentScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="TestBugsScreen" Controller="TestBugsScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="ApplicationScreen" Controller="ApplicationScreen" StyleSheet="Style\main.css"></Step>
-    <Step Name="PushScreen" Controller="PushScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="YandexScreen" Controller="YandexScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="ButtonScreen" Controller="ButtonScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="SecondButtonScreen" Controller="SecondButtonScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="CheckBoxScreen" Controller="CheckBoxScreen" StyleSheet="Style\main.css">  </Step>
+		<Step Name="SomeControlsScreen" Controller="SomeControlsScreen" StyleSheet="Style\main.css">  </Step>
+		<Step Name="LayoutScreen" Controller="LayoutScreen" StyleSheet="Style\main.css">
+			<Action Name="VerticalLayoutScreen" NextStep="VerticalLayoutScreen"></Action>
+			<Action Name="HorizontalLayoutScreen" NextStep="HorizontalLayoutScreen"></Action>
+			<Action Name="DockLayoutScreen" NextStep="DockLayoutScreen"></Action>
+			<Action Name="TestHorizontalLayoutScreen" NextStep="TestHorizontalLayoutScreen"></Action>
+		</Step>
+		<Step Name="VerticalLayoutScreen" Controller="VerticalLayoutScreen" StyleSheet="Style\main.css"> </Step>
+		<Step Name="HorizontalLayoutScreen" Controller="HorizontalLayoutScreen" StyleSheet="Style\main.css">  </Step>
+		<Step Name="TestHorizontalLayoutScreen" Controller="TestHorizontalLayoutScreen" StyleSheet="Style\polev.css"></Step>
+		<Step Name="DockLayoutScreen" Controller="DockLayoutScreen" StyleSheet="Style\main.css">  </Step>
+		<Step Name="ImageScreen" Controller="ImageScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="EditTextScreen" Controller="EditTextScreen" StyleSheet="Style\main.css">
+			<Action Name="SecondEditTextScreen" NextStep="SecondEditTextScreen"></Action>
+		</Step>
+		<Step Name="MemoEditScreen" Controller="MemoEditScreen" StyleSheet="Style\main.css">
+			<Action Name="SecondMemoEditScreen" NextStep="SecondMemoEditScreen"></Action>
+		</Step>
+		<Step Name="SecondEditTextScreen" Controller="SecondEditTextScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="SecondMemoEditScreen" Controller="SecondMemoEditScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="IndicatorScreen" Controller="IndicatorScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="MediaPlayerScreen" Controller="MediaPlayerScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="WebScreen" Controller="WebScreen" StyleSheet="Style\main.css">
+			<Action Name="WebViewScreen" NextStep="WebViewScreen"></Action>
+			<Action Name="WebMapGoogleScreen" NextStep="WebMapGoogleScreen"></Action>
+			<Action Name="WebImageScreen" NextStep="WebImageScreen"></Action>
+		</Step>
+		<Step Name="WebViewScreen" Controller="WebViewScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="WebMapGoogleScreen" Controller="WebMapGoogleScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="WebImageScreen" Controller="WebImageScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="SwipeScreen" Controller="SwipeScreen" StyleSheet="Style\main.css">
+			<Action Name="SwipeHorizontalLayoutScreen" NextStep="SwipeHorizontalLayoutScreen"></Action>
+			<Action Name="SwipeVerticalLayoutScreen" NextStep="SwipeVerticalLayoutScreen"></Action>
+		</Step>
+		<Step Name="SwipeHorizontalLayoutScreen" Controller="SwipeHorizontalLayoutScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="SwipeVerticalLayoutScreen" Controller="SwipeVerticalLayoutScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="DatabaseScreen" Controller="DatabaseScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="DialogScreen" Controller="DialogScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="TestXMLScreen" Controller="TestXMLScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="CameraPhoneGpsScreen" Controller="CameraPhoneGpsScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="FileSystemScreen" Controller="FileSystemScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="ComponentScreen" Controller="ComponentScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="TestBugsScreen" Controller="TestBugsScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="ApplicationScreen" Controller="ApplicationScreen" StyleSheet="Style\main.css"></Step>
+		<Step Name="PushScreen" Controller="PushScreen" StyleSheet="Style\main.css"></Step>
 
 
-  </Workflow>
+	</Workflow>
 
 
 </BusinessProcess>
