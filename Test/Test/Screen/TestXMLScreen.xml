@@ -6,7 +6,7 @@
 
     <!--<c:WebView Url="https://youtube.com"/>-->
     <c:Button Text="Back On Click" OnClick="Back_OnClick" CssClass="CssButton"  />
-    <c:Button Id="_textButton" Text="TextButton" OnClick="ShowTextView_OnClick" Visible="false" />
+    <c:Button Id="_textButton" Text="TextButton" OnClick="ShowTextView_OnClick" Visible="true" OnPressDown="TestButton_OnPressDown" />
     <c:Button Id="_visibleButton" Text="VisibleButton" />
    
     <c:Button Id="_changeVisibilityButton" Text="HIDE VISIBLE BUTTON" OnClick="ChangeVisibility_OnClick" />

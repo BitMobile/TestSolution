@@ -38,10 +38,12 @@
 			<Action Name="HorizontalLayoutScreen" NextStep="HorizontalLayoutScreen"></Action>
 			<Action Name="DockLayoutScreen" NextStep="DockLayoutScreen"></Action>
 			<Action Name="TestHorizontalLayoutScreen" NextStep="TestHorizontalLayoutScreen"></Action>
+			<Action Name="TestButton" NextStep="TestButton"></Action>
 		</Step>
 		<Step Name="VerticalLayoutScreen" Controller="VerticalLayoutScreen" StyleSheet="Style\main.css"> </Step>
 		<Step Name="HorizontalLayoutScreen" Controller="HorizontalLayoutScreen" StyleSheet="Style\main.css">  </Step>
 		<Step Name="TestHorizontalLayoutScreen" Controller="TestHorizontalLayoutScreen" StyleSheet="Style\polev.css"></Step>
+		<Step Name="TestButton" Controller="TestButton" StyleSheet="Style\main.css"> </Step>
 		<Step Name="DockLayoutScreen" Controller="DockLayoutScreen" StyleSheet="Style\main.css">  </Step>
 		<Step Name="ImageScreen" Controller="ImageScreen" StyleSheet="Style\main.css"></Step>
 		<Step Name="EditTextScreen" Controller="EditTextScreen" StyleSheet="Style\main.css">

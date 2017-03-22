@@ -23,9 +23,9 @@ namespace Test
 
 		private static void MoveTo(string stepName)
 		{
-			var n =
-				doc.DocumentElement.SelectSingleNode(string.Format("//BusinessProcess/Workflow/Step[@Name='{0}']",
-					stepName));
+			if (doc.DocumentElement == null) return;
+
+			var n = doc.DocumentElement.SelectSingleNode($"//BusinessProcess/Workflow/Step[@Name='{stepName}']");
 			var stepController = n.Attributes["Controller"].Value;
 			var styleSheet = n.Attributes["StyleSheet"].Value;
 

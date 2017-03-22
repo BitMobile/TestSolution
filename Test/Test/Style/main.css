@@ -4,6 +4,16 @@
     width: 100%;
 }
 
+.TopButtonPressed {
+  background-color: #00ff00;
+    color: #ffffff;
+    height: 6%;
+    margin-left: 13%;
+    margin-top: 2%;
+    text-align: center;
+    width: 75%;
+}
+
 vl {
     background-color: #494A5E;
     height: 100%;
