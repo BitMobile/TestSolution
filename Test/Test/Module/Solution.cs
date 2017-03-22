@@ -25,14 +25,14 @@ namespace Test
             //}
         }
 
-        public override void OnPushMessage(string message)
-        {
-            LocalNotification.Notify($"NEW MESSAGE = {message}", $"NEW MESSAGE = {message}");
-            Toast.MakeToast($"NEW MESSAGE = {message}");
-            DConsole.WriteLine($"NEW MESSAGE = {message}");
+        //public override void OnPushMessage(string message)
+        //{
+        //    LocalNotification.Notify($"NEW MESSAGE = {message}", $"NEW MESSAGE = {message}");
+        //    Toast.MakeToast($"NEW MESSAGE = {message}");
+        //    DConsole.WriteLine($"NEW MESSAGE = {message}");
 
-            //Camera.MakeSnapshot("//private//testPrivate.jpg", 820, DconsoleWriteLine);
-        }
+        //    //Camera.MakeSnapshot("//private//testPrivate.jpg", 820, DconsoleWriteLine);
+        //}
         private void DconsoleWriteLine(object sender, ResultEventArgs<bool> args)
         {
             DConsole.WriteLine(args.Result.ToString());
