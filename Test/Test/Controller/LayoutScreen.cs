@@ -6,8 +6,6 @@ namespace Test
 {
 	public class LayoutScreen : Screen
 	{
-		private Button _textButton;
-
 		public override void OnLoading()
 		{
 			Initialize();
@@ -15,8 +13,13 @@ namespace Test
 
 		private void Initialize()
 		{
-			var vl = new VerticalLayout();
-			AddChild(vl);
+			var vl1 = new VerticalLayout();
+			var vl2 = new VerticalLayout();
+			var sv = new ScrollView
+			{
+				Visible = true,
+				Id = "mySrlView01"
+			};
 
 			var buttonWithAllEvent = new Button
 			{
@@ -57,17 +60,21 @@ namespace Test
 			};
 			buttonWithPressUp.OnPressUp += ButtonOnPressUp;
 
-			vl.AddChild(new Button("VerticalLayout", VerticalLayoutScreen_OnClick));
-			vl.AddChild(new Button("HorizontalLayout", HorizontalLayoutScreen_OnClick));
-			vl.AddChild(new Button("TestHorizontalLayoutScreen", TestHorizontalLayoutScreen_OnClick));
-			vl.AddChild(new Button("DockLayout", DockLayoutScreen_OnClick));
+			vl1.AddChild(new Button("Back", Back_OnClick));
+			vl1.AddChild(new Button("VerticalLayout", VerticalLayoutScreen_OnClick));
+			vl1.AddChild(new Button("HorizontalLayout", HorizontalLayoutScreen_OnClick));
+			vl1.AddChild(new Button("TestHorizontalLayoutScreen", TestHorizontalLayoutScreen_OnClick));
+			vl1.AddChild(new Button("DockLayout", DockLayoutScreen_OnClick));
 
-			vl.AddChild(buttonWithAllEvent);
-			vl.AddChild(buttonWithAllPress);
-			vl.AddChild(buttonWithPressDown);
-			vl.AddChild(buttonWithPressUp);
+			vl1.AddChild(buttonWithAllEvent);
+			vl1.AddChild(buttonWithAllPress);
 
-			vl.AddChild(new Button("Back", Back_OnClick));
+			vl2.AddChild(buttonWithPressDown);
+			vl2.AddChild(buttonWithPressUp);
+
+			sv.AddChild(vl1);
+			sv.AddChild(vl2);
+			AddChild(sv);
 		}
 
 		private static void ButtonOnPressDown(object sender, EventArgs e)
