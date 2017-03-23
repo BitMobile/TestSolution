@@ -4,10 +4,9 @@ using BitMobile.ClientModel3.UI;
 
 namespace Test
 {
-    public class DialogScreen: Screen
+    public class DialogScreen : Screen
     {
-        private Dialog dialog;
-        public override void OnLoading()
+		public override void OnLoading()
         {
             Initialize();
         }
@@ -16,28 +15,23 @@ namespace Test
         {
             var vl = new VerticalLayout();
             AddChild(vl);
-
-
+			
             vl.AddChild(new Button("Test Dialog.Message Success", AddNewDialog_OnClick));
             vl.AddChild(new Button("Test Dialog", Dialog_OnClick));
             
-            
-
             vl.AddChild(new Button("Back", Back_OnClick));
-
         }
-
 
         private void Back_OnClick(object sender, EventArgs e)
         {
             BusinessProcess.DoBack();
         }
-        private void AddNewDialog_OnClick(object sender, EventArgs e)
+
+		private void AddNewDialog_OnClick(object sender, EventArgs e)
         {
             Dialog.Message("Success");
 
         }
-      
 
         private void Dialog_OnClick(object sender, EventArgs e)
         {

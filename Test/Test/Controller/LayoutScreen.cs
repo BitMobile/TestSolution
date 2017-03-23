@@ -18,32 +18,69 @@ namespace Test
 			var vl = new VerticalLayout();
 			AddChild(vl);
 
-			_textButton = new Button {Text = "TextButton" };
-			_textButton.OnClick += TestButton_OnClick;
-			_textButton.OnPressDown += TestButton_OnPressDown;
-			_textButton.OnPressUp += TestButton_OnPressUp;
+			var buttonWithAllEvent = new Button
+			{
+				Enabled = true,
+				Id = "myBtn01",
+				Visible = true,
+				Text = "buttonWithAllEvent"
+			};
+			buttonWithAllEvent.OnClick += ButtonOnClick;
+			buttonWithAllEvent.OnPressDown += ButtonOnPressDown;
+			buttonWithAllEvent.OnPressUp += ButtonOnPressUp;
+
+			var buttonWithAllPress = new Button
+			{
+				Enabled = true,
+				Id = "myBtn02",
+				Visible = true,
+				Text = "buttonWithAllPress"
+			};
+			buttonWithAllPress.OnPressDown += ButtonOnPressDown;
+			buttonWithAllPress.OnPressUp += ButtonOnPressUp;
+
+			var buttonWithPressDown = new Button
+			{
+				Enabled = true,
+				Id = "myBtn03",
+				Visible = true,
+				Text = "buttonWithPressDown"
+			};
+			buttonWithPressDown.OnPressDown += ButtonOnPressDown;
+
+			var buttonWithPressUp = new Button
+			{
+				Enabled = true,
+				Id = "myBtn04",
+				Visible = true,
+				Text = "buttonWithPressUp"
+			};
+			buttonWithPressUp.OnPressUp += ButtonOnPressUp;
 
 			vl.AddChild(new Button("VerticalLayout", VerticalLayoutScreen_OnClick));
 			vl.AddChild(new Button("HorizontalLayout", HorizontalLayoutScreen_OnClick));
 			vl.AddChild(new Button("TestHorizontalLayoutScreen", TestHorizontalLayoutScreen_OnClick));
 			vl.AddChild(new Button("DockLayout", DockLayoutScreen_OnClick));
 
-			vl.AddChild(_textButton);
+			vl.AddChild(buttonWithAllEvent);
+			vl.AddChild(buttonWithAllPress);
+			vl.AddChild(buttonWithPressDown);
+			vl.AddChild(buttonWithPressUp);
 
 			vl.AddChild(new Button("Back", Back_OnClick));
 		}
 
-		private static void TestButton_OnPressDown(object sender, EventArgs e)
+		private static void ButtonOnPressDown(object sender, EventArgs e)
 		{
 			DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss.ms}] -> press down btn");
 		}
 
-		private static void TestButton_OnPressUp(object sender, EventArgs e)
+		private static void ButtonOnPressUp(object sender, EventArgs e)
 		{
 			DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss.ms}] -> press up btn");
 		}
 
-		private static void TestButton_OnClick(object sender, EventArgs e)
+		private static void ButtonOnClick(object sender, EventArgs e)
 		{
 			DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss.ms}] -> click on btn");
 		}
