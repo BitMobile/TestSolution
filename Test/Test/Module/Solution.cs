@@ -42,6 +42,7 @@ namespace Test
 		{
 			DConsole.WriteLine(args.Result.ToString());
 		}
+
 		public override void OnShake()
 		{
 			DConsole.WriteLine("on shake");
@@ -55,6 +56,10 @@ namespace Test
 		public override void OnBackground()
 		{
 			DConsole.WriteLine("on background");
+		}
+
+		public override void OnLocalNotificationClicked(string message)
+		{
 		}
 	}
 }

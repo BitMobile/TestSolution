@@ -40,7 +40,7 @@ namespace Test
 
 		public static void DoAction(string actionName)
 		{
-			var currentNode = (XmlNode) stackNodes.Peek();
+			var currentNode = (XmlNode)stackNodes.Peek();
 			var n = currentNode.SelectSingleNode(string.Format("Action[@Name='{0}']", actionName));
 			var stepName = n.Attributes["NextStep"].Value;
 			MoveTo(stepName);
@@ -48,26 +48,21 @@ namespace Test
 
 		public static void DoBack()
 		{
-			//remove current
 			stackNodes.Pop();
 			stackScreens.Pop();
 
-			var scr = (Screen) stackScreens.Peek();
+			var scr = (Screen)stackScreens.Peek();
 			scr.Show();
 		}
 
 		private static Screen GetScreenByControllerName(string name)
 		{
-			//return Screen.CreateScreen("Test." + name);
-			//full type name should be specified 
-
-			//var scr = Screen.CreateScreen("Test." + name); //full type name should be specified
-			Screen scr = (Screen) Application.CreateInstance("Test." + name); //full type name should be specified
+			Screen scr = (Screen)Application.CreateInstance("Test." + name);
 			Stream s = null;
 			var path = string.Format(@"Screen\{0}.xml", name);
 			try
 			{
-				s = Application.GetResourceStream(path); //try to find markup resource
+				s = Application.GetResourceStream(path);
 			}
 			catch
 			{
