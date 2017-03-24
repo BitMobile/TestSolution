@@ -36,29 +36,28 @@ namespace Test
 			}
 		}
 
-		private void DconsoleWriteLine(object sender, ResultEventArgs<bool> args)
-		{
-			DConsole.WriteLine(args.Result.ToString());
-		}
-
 		public override void OnShake()
 		{
+			base.OnShake();
 			DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> shake");
 		}
 
 		public override void OnRestore()
 		{
+			base.OnRestore();
 			DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> restore");
 		}
 
 		public override void OnBackground()
 		{
+			base.OnBackground();
 			DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> background");
 		}
 
-		public override void OnLocalNotificationClicked(string message)
-		{
-			DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> click notification");
-		}
+		//public override void OnLocalNotificationClicked(string message)
+		//{
+		//	base.OnLocalNotificationClicked(message);
+		//	DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> click notification");
+		//}
 	}
 }

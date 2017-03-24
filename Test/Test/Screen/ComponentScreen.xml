@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<c:Screen xmlns:c="BitMobile.ClientModel3.UI" xmlns:s="BitMobile.ValueStack">
-  <c:VerticalLayout Id="vl">
-    <c:Button Text="Save" OnClick="Rename_OnClick" />
-    <s:Include File="Screen\SomeComponent.xml" />
-  </c:VerticalLayout>
-</c:Screen>
