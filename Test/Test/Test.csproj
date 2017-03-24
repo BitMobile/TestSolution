@@ -224,9 +224,6 @@
     <EmbeddedResource Include="Translation\ru.txt" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Screen\LayoutScreen.xml" />
     <EmbeddedResource Include="Image\grotem.jpg" />
     <Content Include="Screen\EditServicesOrMaterialsScreen.xml" />

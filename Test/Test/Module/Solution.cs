@@ -10,16 +10,14 @@ namespace Test
 
 		public override void OnCreate()
 		{
-			BusinessProcess.Init();
-			DConsole.WriteLine(Translator.Translate("greeting"));
 			try
 			{
-				OnPushMessage(Translator.Translate("greeting"), Translator.Translate("test"));
+				base.OnCreate();
+				BusinessProcess.Init();
 			}
-			catch (Exception)
+			catch (Exception exc)
 			{
-				DConsole.WriteLine("SOME EXCEPTION");
-				OnPushMessage("nope", "nope");
+				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error on create: {exc}");
 			}
 		}
 
@@ -28,9 +26,9 @@ namespace Test
 			try
 			{
 				base.OnPushMessage(message, additionalInfo);
-				LocalNotification.Notify($"NEW MESSAGE = {message}", $"NEW INFO = {additionalInfo}");
-				Toast.MakeToast($"NEW MESSAGE = {message}");
-				DConsole.WriteLine($"NEW MESSAGE = {message}");
+				LocalNotification.Notify($"msg = {message}", $"info = {additionalInfo}");
+				Toast.MakeToast($"msg = {message}");
+				DConsole.WriteLine($"msg = {message}");
 			}
 			catch (Exception exc)
 			{
@@ -45,21 +43,22 @@ namespace Test
 
 		public override void OnShake()
 		{
-			DConsole.WriteLine("on shake");
+			DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> shake");
 		}
 
 		public override void OnRestore()
 		{
-			DConsole.WriteLine("on restore");
+			DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> restore");
 		}
 
 		public override void OnBackground()
 		{
-			DConsole.WriteLine("on background");
+			DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> background");
 		}
 
 		public override void OnLocalNotificationClicked(string message)
 		{
+			DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> click notification");
 		}
 	}
 }
