@@ -3,6 +3,7 @@ using System.Xml;
 using BitMobile.ClientModel3;
 using BitMobile.ClientModel3.UI;
 using XmlDocument = BitMobile.ClientModel3.XmlDocument;
+using System;
 
 namespace Test
 {
@@ -48,11 +49,18 @@ namespace Test
 
 		public static void DoBack()
 		{
-			stackNodes.Pop();
-			stackScreens.Pop();
+			try
+			{
+				stackNodes.Pop();
+				stackScreens.Pop();
 
-			var scr = (Screen)stackScreens.Peek();
-			scr.Show();
+				var scr = (Screen)stackScreens.Peek();
+				scr.Show();
+			}
+			catch (Exception exc)
+			{
+				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error while go back...\n{exc}");
+			}
 		}
 
 		private static Screen GetScreenByControllerName(string name)
