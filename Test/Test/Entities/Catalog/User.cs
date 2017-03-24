@@ -1,4 +1,3 @@
-using System;
 using BitMobile.DbEngine;
 
 namespace Test.Catalog
@@ -16,9 +15,7 @@ namespace Test.Catalog
         public string EMail { get; set; }
         public DbRef UserID { get; set; }
         public string Phone { get; set; }
-        public DbRef Role { get; set; }
-        public string Language { get; set; }
-        public string AspNetUserID { get; set; }
+        public string Role { get; set; }
 }
     public class User_Bag : DbEntity
     {

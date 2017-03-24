@@ -1,5 +1,3 @@
 ﻿about		MORE ABOUT THE APPLICATION
 test		THIS IS TEST
 greeting		Welcome To Bitmobile!
-hello		Hello
-world		World

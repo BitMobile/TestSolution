@@ -59,7 +59,6 @@ C:\Users\me\Documents\GitHub\TestSolution\Test\Test\bin\Debug\Application.W.dll
 C:\Users\me\Documents\GitHub\TestSolution\Test\Test\obj\Debug\Test.dll
 C:\Users\me\Documents\GitHub\TestSolution\Test\Test\obj\Debug\Test.pdb
 C:\Users\me\Documents\GitHub\TestSolution\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
-C:\Users\TAV-work\Projects\TestSolution\Test\Test\obj\Debug\Test.csproj.App.config
 C:\Users\TAV-work\Projects\TestSolution\Test\Test\bin\Debug\Test.dll.config
 C:\Users\TAV-work\Projects\TestSolution\Test\Test\bin\Debug\Test.dll
 C:\Users\TAV-work\Projects\TestSolution\Test\Test\bin\Debug\Test.pdb
@@ -77,6 +76,7 @@ C:\Users\TAV-work\Projects\TestSolution\Test\Test\bin\Debug\System.Transactions.
 C:\Users\TAV-work\Projects\TestSolution\Test\Test\bin\Debug\Windows.exe
 C:\Users\TAV-work\Projects\TestSolution\Test\Test\bin\Debug\System.Net.Http.Extensions.xml
 C:\Users\TAV-work\Projects\TestSolution\Test\Test\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\TAV-work\Projects\TestSolution\Test\Test\obj\Debug\Test.csproj.App.config
 C:\Users\TAV-work\Projects\TestSolution\Test\Test\obj\Debug\Test.dll
 C:\Users\TAV-work\Projects\TestSolution\Test\Test\obj\Debug\Test.pdb
 C:\Users\TAV-work\Projects\TestSolution\Test\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache

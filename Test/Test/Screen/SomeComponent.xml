@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<c:Component xmlns:c="BitMobile.ClientModel3.UI" xmlns:s="BitMobile.ValueStack">
+  <c:Button Text="From component"></c:Button>
+  <c:WebMapGoogle Id="_webMapGoogle" />
+</c:Component>

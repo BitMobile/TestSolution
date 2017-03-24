@@ -1,4 +1,3 @@
-using System;
 using BitMobile.DbEngine;
 
 namespace Test.Enum

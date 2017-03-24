@@ -1,5 +1,3 @@
 ﻿about		MORE ABOUT THE APPLICATION
 test		ЭТО ТЕСТ
 greeting		Добро Пожаловать!
-hello		Привет
-world		Мир

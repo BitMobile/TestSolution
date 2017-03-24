@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<c:Screen xmlns:c="BitMobile.ClientModel3.UI" xmlns:s="BitMobile.ValueStack">
+	<c:VerticalLayout>
+		<c:Button Id="_textButton" Text="TextButton" OnClick="TestButton_OnClick" OnPressDown="TestButton_OnPressDown" OnPressUp="TestButton_OnPressUp"/>
+	</c:VerticalLayout>
+</c:Screen>
