@@ -24,7 +24,7 @@ namespace Test
 
 		private void Back_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoBack();
+			BusinessProcess.MoveTo("MainScreen");
 		}
 
 		private void AddNewDialog_OnClick(object sender, EventArgs e)

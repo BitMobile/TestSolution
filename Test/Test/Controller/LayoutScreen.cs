@@ -94,7 +94,7 @@ namespace Test
 
 		private static void Back_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoBack();
+			BusinessProcess.MoveTo("MainScreen");
 		}
 
 		private static void VerticalLayoutScreen_OnClick(object sender, EventArgs e)

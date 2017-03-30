@@ -60,7 +60,7 @@ namespace Test
 
         private void back_OnClick(object sender, EventArgs e)
         {
-            BusinessProcess.DoBack();
+            BusinessProcess.MoveTo("MainScreen");
         }
     }
 }

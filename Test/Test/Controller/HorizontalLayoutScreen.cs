@@ -39,12 +39,12 @@ namespace Test
 
         private void Hl_OnClick(object sender, EventArgs e)
         {
-             BusinessProcess.DoBack();
+             BusinessProcess.MoveTo("MainScreen");
         }
 
         private void Back_OnClick(object sender, EventArgs e)
         {
-            BusinessProcess.DoBack();
+            BusinessProcess.MoveTo("MainScreen");
         }
 
         private void ChangeVisibilityOfHL2_OnClick(object sender, EventArgs e)
