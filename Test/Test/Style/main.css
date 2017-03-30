@@ -165,14 +165,15 @@ CssButton {
 }
 
 .EditText {
-	background-color: #eee;
-	color: #09f;
+	background-color: #AFAFAF;
+	color: #0a3a6d;
 	font-size: 80%;
 	height: 5mm;
-	margin-top: 2%;
+	margin-left: 5%;
+	margin-top: 5%;
 	padding-top: 10%;
-	placeholder-color: #8b7765;
-	width: 100%;
+	/*placeholder-color: #8b7765;*/
+	width: 90%;
 }
 
 .CssEditText {

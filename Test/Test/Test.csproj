@@ -103,6 +103,7 @@
     <Compile Include="Controller\ApplicationScreen.cs" />
     <Compile Include="Controller\EditTextScreen.cs" />
     <Compile Include="Controller\FileSystemScreen.cs" />
+    <Compile Include="Controller\FocusScreen.cs" />
     <Compile Include="Controller\HorizontalLayoutScreen.cs" />
     <Compile Include="Controller\ImageScreen.cs" />
     <Compile Include="Controller\IndicatorScreen.cs" />

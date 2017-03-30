@@ -65,10 +65,26 @@ namespace Test
 
 			vl3.AddChild(tPush);
 
+			var focusScreen = new Button
+			{
+				Visible = true,
+				Text = "Test focus",
+				Id = "MyTestFocusTestButton",
+				CssClass = "CssButton",
+				Enabled = true
+			};
+			focusScreen.OnClick += OpenFocusScreen;
+			vl3.AddChild(focusScreen);
+
 			_scrollView.AddChild(vl);
 			_scrollView.AddChild(vl2);
 			_scrollView.AddChild(vl3);
 			AddChild(_scrollView);
+		}
+
+		private static void OpenFocusScreen(object sender, EventArgs e)
+		{
+			BusinessProcess.DoAction("FocusScreen");
 		}
 
 		private static void GetPushOnClick(object sender, EventArgs e)

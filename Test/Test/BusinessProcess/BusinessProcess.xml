@@ -4,30 +4,32 @@
 	<Workflow Name="Main">
 
 		<Step Name="MainScreen" Controller="MainScreen" StyleSheet="Style\second.css">
-			<Action Name="YandexScreen" NextStep="YandexScreen">  </Action>
-			<Action Name="ButtonScreen" NextStep="ButtonScreen">  </Action>
-			<Action Name="CheckBoxScreen" NextStep="CheckBoxScreen">  </Action>
-			<Action Name="SomeControlsScreen" NextStep="SomeControlsScreen"> </Action>
-			<Action Name="LayoutScreen" NextStep="LayoutScreen"></Action>
-			<Action Name="ImageScreen" NextStep="ImageScreen"></Action>
-			<Action Name="EditTextScreen" NextStep="EditTextScreen"></Action>
-			<Action Name="MemoEditScreen" NextStep="MemoEditScreen"></Action>
-			<Action Name="IndicatorScreen" NextStep="IndicatorScreen"></Action>
-			<Action Name="MediaPlayerScreen" NextStep="MediaPlayerScreen"></Action>
-			<Action Name="WebScreen" NextStep="WebScreen"></Action>
-			<Action Name="SwipeScreen" NextStep="SwipeScreen"></Action>
-			<Action Name="DatabaseScreen" NextStep="DatabaseScreen"></Action>
-			<Action Name="DialogScreen" NextStep="DialogScreen"></Action>
-			<Action Name="TestXMLScreen" NextStep="TestXMLScreen"></Action>
-			<Action Name="CameraPhoneGpsScreen" NextStep="CameraPhoneGpsScreen"></Action>
-			<Action Name="FileSystemScreen" NextStep="FileSystemScreen"></Action>
-			<Action Name="ComponentScreen" NextStep="ComponentScreen"></Action>
-			<Action Name="TestBugsScreen" NextStep="TestBugsScreen"></Action>
-			<Action Name="ApplicationScreen" NextStep="ApplicationScreen"></Action>
-			<Action Name="PushScreen" NextStep="PushScreen"></Action>
-			<Action Name="SecondButtonScreen" NextStep="SecondButtonScreen"></Action>
+			<Action Name="YandexScreen" NextStep="YandexScreen" LastStep="MainScreen"></Action>
+			<Action Name="ButtonScreen" NextStep="ButtonScreen" LastStep="MainScreen"></Action>
+			<Action Name="CheckBoxScreen" NextStep="CheckBoxScreen" LastStep="MainScreen"></Action>
+			<Action Name="SomeControlsScreen" NextStep="SomeControlsScreen" LastStep="MainScreen"></Action>
+			<Action Name="LayoutScreen" NextStep="LayoutScreen" LastStep="MainScreen"></Action>
+			<Action Name="ImageScreen" NextStep="ImageScreen" LastStep="MainScreen"></Action>
+			<Action Name="EditTextScreen" NextStep="EditTextScreen" LastStep="MainScreen"></Action>
+			<Action Name="MemoEditScreen" NextStep="MemoEditScreen" LastStep="MainScreen"></Action>
+			<Action Name="IndicatorScreen" NextStep="IndicatorScreen" LastStep="MainScreen"></Action>
+			<Action Name="MediaPlayerScreen" NextStep="MediaPlayerScreen" LastStep="MainScreen"></Action>
+			<Action Name="WebScreen" NextStep="WebScreen" LastStep="MainScreen"></Action>
+			<Action Name="SwipeScreen" NextStep="SwipeScreen" LastStep="MainScreen"></Action>
+			<Action Name="DatabaseScreen" NextStep="DatabaseScreen" LastStep="MainScreen"></Action>
+			<Action Name="DialogScreen" NextStep="DialogScreen" LastStep="MainScreen"></Action>
+			<Action Name="TestXMLScreen" NextStep="TestXMLScreen" LastStep="MainScreen"></Action>
+			<Action Name="CameraPhoneGpsScreen" NextStep="CameraPhoneGpsScreen" LastStep="MainScreen"></Action>
+			<Action Name="FileSystemScreen" NextStep="FileSystemScreen" LastStep="MainScreen"></Action>
+			<Action Name="ComponentScreen" NextStep="ComponentScreen" LastStep="MainScreen"></Action>
+			<Action Name="TestBugsScreen" NextStep="TestBugsScreen" LastStep="MainScreen"></Action>
+			<Action Name="ApplicationScreen" NextStep="ApplicationScreen" LastStep="MainScreen"></Action>
+			<Action Name="PushScreen" NextStep="PushScreen" LastStep="MainScreen"></Action>
+			<Action Name="SecondButtonScreen" NextStep="SecondButtonScreen" LastStep="MainScreen"></Action>
+			<Action Name="FocusScreen" NextStep="FocusScreen" LastStep="MainScreen"></Action>
 		</Step>
 
+		<Step Name="FocusScreen" Controller="FocusScreen" StyleSheet="Style\main.css"></Step>
 		<Step Name="YandexScreen" Controller="YandexScreen" StyleSheet="Style\main.css"></Step>
 		<Step Name="ButtonScreen" Controller="ButtonScreen" StyleSheet="Style\main.css"></Step>
 		<Step Name="SecondButtonScreen" Controller="SecondButtonScreen" StyleSheet="Style\main.css"></Step>

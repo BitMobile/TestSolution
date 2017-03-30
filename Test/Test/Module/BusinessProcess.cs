@@ -22,7 +22,7 @@ namespace Test
 			MoveTo(firstStepName);
 		}
 
-		private static void MoveTo(string stepName)
+		public static void MoveTo(string stepName)
 		{
 			if (doc.DocumentElement == null) return;
 
@@ -42,8 +42,16 @@ namespace Test
 		public static void DoAction(string actionName)
 		{
 			var currentNode = (XmlNode)stackNodes.Peek();
-			var n = currentNode.SelectSingleNode(string.Format("Action[@Name='{0}']", actionName));
+			var n = currentNode.SelectSingleNode($"Action[@Name='{actionName}']");
 			var stepName = n.Attributes["NextStep"].Value;
+			MoveTo(stepName);
+		}
+
+		public static void GoBack(string actionName)
+		{
+			var currentNode = (XmlNode)stackNodes.Peek();
+			var n = currentNode.SelectSingleNode($"Action[@Name='{actionName}']");
+			var stepName = n.Attributes["LastStep"].Value;
 			MoveTo(stepName);
 		}
 
