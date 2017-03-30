@@ -10,6 +10,7 @@ namespace Test
 			try
 			{
 				base.OnLoading();
+
 				var verticalLayout = new VerticalLayout
 				{
 					Visible = true,
@@ -24,6 +25,7 @@ namespace Test
 					Placeholder = "auto focus is enabled",
 					AutoFocus = true
 				};
+				editTextAutoFocusTrue.OnLostFocus += EditTextOnLostFocus;
 
 				var editTextAutoFocusFalse = new EditText
 				{
@@ -32,6 +34,7 @@ namespace Test
 					Placeholder = "auto focus is disabled",
 					AutoFocus = false
 				};
+				editTextAutoFocusFalse.OnLostFocus += EditTextOnLostFocus;
 
 				var backButton = new Button
 				{
@@ -65,6 +68,19 @@ namespace Test
 			catch (Exception exc)
 			{
 				Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error in action: FocusScreen.Back\n" +
+								$"Exception: {exc}");
+			}
+		}
+
+		private static void EditTextOnLostFocus(object sender, EventArgs e)
+		{
+			try
+			{
+				Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> lost focus!");
+			}
+			catch (Exception exc)
+			{
+				Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error in action: FocusScreen.EditTextOnLostFocus\n" +
 								$"Exception: {exc}");
 			}
 		}
