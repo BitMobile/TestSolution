@@ -8,9 +8,9 @@ namespace Test
     {
         private readonly Button _textButton = null; //this variable will be assigned via screen xml template
         private readonly Button _visibleButton = null; //this variable will be assigned via screen xml template
-        private readonly Button _onEvent = null; //this variable will be assigned via screen xml template
-        private EditText edit;
-        private TextView text;
+        //private readonly Button _onEvent = null; //this variable will be assigned via screen xml template
+        //private EditText _edit;
+        //private TextView _text;
 
         public override void OnLoading()
         {

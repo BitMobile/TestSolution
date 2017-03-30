@@ -38,7 +38,6 @@ namespace Test
             //LocalNotification.Notify("Срочно", "Сделать фото объекта");
 
             DConsole.WriteLine("Done");
-
             //thread.Sleep(5000);
             PushNotification.PushMessage("Привет",
                 new[]

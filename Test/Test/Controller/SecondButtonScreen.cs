@@ -7,25 +7,19 @@ namespace Test
 	public class SecondButtonScreen : Screen
 	{
 		private VerticalLayout _verticalLayout1;
-		private VerticalLayout _verticalLayout2;
-		private static EditText _cssEditText;
-		private static EditText _invisibeEditText;
-		private EditText _notEnabledEditText;
-		private static EditText _placeholderEditText;
-		private static EditText _textEditText;
-		private static ScrollView _scrollView;
-		private static ProgressBar progressBar;
+		private static ProgressBar _progressBar;
 
 		public override void OnLoading()
 		{
 			_verticalLayout1 = new VerticalLayout();
 
-			progressBar = new ProgressBar
+			_progressBar = new ProgressBar
 			{
 				Id = "pb",
-				CssClass = "Progress"
+				CssClass = "Progress",
+				Visible = true
 			};
-			_verticalLayout1.AddChild(progressBar);
+			_verticalLayout1.AddChild(_progressBar);
 
 			var testProgressBar = new Button
 			{
@@ -47,9 +41,8 @@ namespace Test
 		{
 			try
 			{
-				progressBar.Start();
-				progressBar.Max = 100;
-				progressBar.Progress += 1;
+				_progressBar.Start();
+				_progressBar.Percent += 3;
 				DConsole.WriteLine("start PB...");
 			}
 			catch (Exception exc)

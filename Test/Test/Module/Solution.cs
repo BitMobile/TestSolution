@@ -6,8 +6,6 @@ namespace Test
 {
 	public class Solution : Application
 	{
-		private readonly Thread thread = new Thread();
-
 		public override void OnCreate()
 		{
 			try
@@ -28,19 +26,13 @@ namespace Test
 				base.OnPushMessage(message, additionalInfo);
 				LocalNotification.Notify($"msg = {message}", $"info = {additionalInfo}");
 				Toast.MakeToast($"msg = {message}");
-				DConsole.WriteLine($"msg = {message}");
 			}
 			catch (Exception exc)
 			{
 				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error on push msg: {exc}");
 			}
 		}
-
-		private void DconsoleWriteLine(object sender, ResultEventArgs<bool> args)
-		{
-			DConsole.WriteLine(args.Result.ToString());
-		}
-
+		
 		public override void OnShake()
 		{
 			DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> shake");
@@ -58,7 +50,16 @@ namespace Test
 
 		public override void OnLocalNotificationClicked(string message)
 		{
-			DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> click notification");
+			try
+			{
+				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> click notification");
+				BusinessProcess.DoAction(message);
+			}
+			catch (Exception exc)
+			{
+				Console.WriteLine(exc);
+				throw;
+			}
 		}
 	}
 }

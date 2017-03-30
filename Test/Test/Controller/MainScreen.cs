@@ -1,6 +1,7 @@
 ﻿using System;
 using BitMobile.ClientModel3;
 using BitMobile.ClientModel3.UI;
+using ClientModel3.MD;
 
 namespace Test
 {
@@ -10,14 +11,7 @@ namespace Test
 
 		public override void OnLoading()
 		{
-			//На следующей строчке падает.
-			var isStart = GpsTracking.Start();
 			Initialize();
-		}
-
-		public override void OnShow()
-		{
-			base.OnShow();
 		}
 
 		private void Initialize()
@@ -59,10 +53,35 @@ namespace Test
 
 			vl3.AddChild(new Button("TaV TEST", SecondButtonScreenOnClick));
 
+			var tPush = new Button
+			{
+				Visible = true,
+				Text = "Test push",
+				Id = "MyTestPushButton",
+				CssClass = "CssButton",
+				Enabled = true
+			};
+			tPush.OnClick += GetPushOnClick;
+
+			vl3.AddChild(tPush);
+
 			_scrollView.AddChild(vl);
 			_scrollView.AddChild(vl2);
 			_scrollView.AddChild(vl3);
 			AddChild(_scrollView);
+		}
+
+		private static void GetPushOnClick(object sender, EventArgs e)
+		{
+			try
+			{
+				LocalNotification.Notify("Test this push!", "JUST GO TO layout screen");
+			}
+			catch (Exception exc)
+			{
+				Console.WriteLine(exc);
+				throw;
+			}
 		}
 
 		private static void YandexScreen_OnClick(object sender, EventArgs e)
