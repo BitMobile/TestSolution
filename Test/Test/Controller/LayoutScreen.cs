@@ -99,22 +99,22 @@ namespace Test
 
 		private static void VerticalLayoutScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("VerticalLayoutScreen");
+			BusinessProcess.MoveTo("VerticalLayoutScreen");
 		}
 
 		private static void HorizontalLayoutScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("HorizontalLayoutScreen");
+			BusinessProcess.MoveTo("HorizontalLayoutScreen");
 		}
 
 		private static void TestHorizontalLayoutScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("TestHorizontalLayoutScreen");
+			BusinessProcess.MoveTo("TestHorizontalLayoutScreen");
 		}
 
 		private static void DockLayoutScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("DockLayoutScreen");
+			BusinessProcess.MoveTo("DockLayoutScreen");
 		}
 	}
 }

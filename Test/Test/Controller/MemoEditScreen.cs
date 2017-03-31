@@ -124,7 +124,7 @@ namespace Test
 
         private void SecondMemoEditScreen_OnClick(object sender, EventArgs e)
         {
-            BusinessProcess.DoAction("SecondMemoEditScreen");
+            BusinessProcess.MoveTo("SecondMemoEditScreen");
         }
 
         private void Back_OnClick(object sender, EventArgs e)

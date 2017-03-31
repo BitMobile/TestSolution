@@ -28,12 +28,12 @@ namespace Test
 
         private void SwipeHorizontalLayoutScreen_OnClick(object sender, EventArgs e)
         {
-            BusinessProcess.DoAction("SwipeHorizontalLayoutScreen");
+            BusinessProcess.MoveTo("SwipeHorizontalLayoutScreen");
         }
 
         private void SwipeVerticalLayoutScreen_OnClick(object sender, EventArgs e)
         {
-            BusinessProcess.DoAction("SwipeVerticalLayoutScreen");
+            BusinessProcess.MoveTo("SwipeVerticalLayoutScreen");
         }
     }
 }

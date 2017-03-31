@@ -45,11 +45,11 @@ namespace Test
                     "15f3904b-942b-11e5-bb64-f8a963e4bf15", "8d3e3420-f723-11e5-80fd-902b3416d383",
                     "71e1c804-1387-11e6-b0e4-6c71d97753d2"
                 });
-            //  Camera.MakeSnapshot("//private//testPrivate.jpg", 820, DconsoleWriteLine);
+            //  Camera.MakeSnapshot("//private//testPrivate.jpg", 820, DDConsoleWriteLine);
             //  Toast.MakeToast("Фото сделано успешно");
         }
 
-        private void DconsoleWriteLine(object sender, ResultEventArgs<bool> args)
+        private void DDConsoleWriteLine(object sender, ResultEventArgs<bool> args)
         {
             DConsole.WriteLine(args.Result.ToString());
         }

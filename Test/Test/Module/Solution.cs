@@ -53,11 +53,11 @@ namespace Test
 			try
 			{
 				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> click notification");
-				BusinessProcess.DoAction(message);
+				BusinessProcess.MoveTo(message);
 			}
 			catch (Exception exc)
 			{
-				Console.WriteLine(exc);
+				DConsole.WriteLine($"{exc}");
 				throw;
 			}
 		}

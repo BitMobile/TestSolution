@@ -1,4 +1,5 @@
 ﻿using System;
+using BitMobile.ClientModel3;
 using BitMobile.ClientModel3.UI;
 
 namespace Test
@@ -13,12 +14,6 @@ namespace Test
 
 				var scroll = new ScrollView();
 				var vl1 = new VerticalLayout
-				{
-					Visible = true,
-					Id = "MyVerticalLayoutOnFocusScreen",
-					CssClass = "vl"
-				};
-				var vl2 = new VerticalLayout
 				{
 					Visible = true,
 					Id = "MyVerticalLayoutOnFocusScreen",
@@ -57,16 +52,28 @@ namespace Test
 
 				vl1.AddChild(editTextAutoFocusTrue);
 				vl1.AddChild(editTextAutoFocusFalse);
-				vl2.AddChild(backButton);
+				vl1.AddChild(backButton);
 
 				scroll.AddChild(vl1);
-				scroll.AddChild(vl2);
-
 				AddChild(scroll);
 			}
 			catch (Exception exc)
 			{
-				Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error in action: FocusScreen.OnLoading\n" +
+				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error in action: FocusScreen.OnLoading\n" +
+								$"Exception: {exc}");
+			}
+		}
+
+		public override void OnShow()
+		{
+			try
+			{
+				base.OnShow();
+				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> FocusScreen.OnShow");
+			}
+			catch (Exception exc)
+			{
+				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error in action: FocusScreen.OnShow\n" +
 								$"Exception: {exc}");
 			}
 		}
@@ -79,7 +86,7 @@ namespace Test
 			}
 			catch (Exception exc)
 			{
-				Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error in action: FocusScreen.Back\n" +
+				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error in action: FocusScreen.Back\n" +
 								$"Exception: {exc}");
 			}
 		}
@@ -88,11 +95,11 @@ namespace Test
 		{
 			try
 			{
-				Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> get focus!");
+				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> get focus!");
 			}
 			catch (Exception exc)
 			{
-				Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error in action: FocusScreen.EditTextOnLostFocus\n" +
+				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error in action: FocusScreen.EditTextOnLostFocus\n" +
 								$"Exception: {exc}");
 			}
 		}
@@ -101,11 +108,11 @@ namespace Test
 		{
 			try
 			{
-				Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> lost focus!");
+				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> lost focus!");
 			}
 			catch (Exception exc)
 			{
-				Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error in action: FocusScreen.EditTextOnLostFocus\n" +
+				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error in action: FocusScreen.EditTextOnLostFocus\n" +
 								$"Exception: {exc}");
 			}
 		}

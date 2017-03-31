@@ -24,73 +24,18 @@ namespace Test
 
 		public static void MoveTo(string stepName)
 		{
-			if (doc.DocumentElement == null) return;
-
-			var n = doc.DocumentElement.SelectSingleNode($"//BusinessProcess/Workflow/Step[@Name='{stepName}']");
+			var n = doc.DocumentElement?.SelectSingleNode($"//BusinessProcess/Workflow/Step[@Name='{stepName}']");
+			if (n?.Attributes == null) return;
 			var stepController = n.Attributes["Controller"].Value;
 			var styleSheet = n.Attributes["StyleSheet"].Value;
 
-			var scr = GetScreenByControllerName(stepController);
+			var scr = (Screen)Application.CreateInstance("Test." + stepController);
 
 			stackScreens.Push(scr);
 			stackNodes.Push(n);
 
 			scr.LoadStyleSheet(Application.GetResourceStream(styleSheet));
 			scr.Show();
-		}
-
-		public static void DoAction(string actionName)
-		{
-			var currentNode = (XmlNode)stackNodes.Peek();
-			var n = currentNode.SelectSingleNode($"Action[@Name='{actionName}']");
-			var stepName = n.Attributes["NextStep"].Value;
-			MoveTo(stepName);
-		}
-
-		public static void GoBack(string actionName)
-		{
-			var currentNode = (XmlNode)stackNodes.Peek();
-			var n = currentNode.SelectSingleNode($"Action[@Name='{actionName}']");
-			var stepName = n.Attributes["LastStep"].Value;
-			MoveTo(stepName);
-		}
-
-		public static void DoBack()
-		{
-			try
-			{
-				stackNodes.Pop();
-				stackScreens.Pop();
-
-				var scr = (Screen)stackScreens.Peek();
-				scr.Show();
-			}
-			catch (Exception exc)
-			{
-				DConsole.WriteLine($"[{DateTime.Now:HH:mm:ss}] -> error while go back...\n{exc}");
-			}
-		}
-
-		private static Screen GetScreenByControllerName(string name)
-		{
-			Screen scr = (Screen)Application.CreateInstance("Test." + name);
-			Stream s = null;
-			var path = string.Format(@"Screen\{0}.xml", name);
-			try
-			{
-				s = Application.GetResourceStream(path);
-			}
-			catch
-			{
-				DConsole.WriteLine(string.Format("Resource {0} has not been found", path));
-			}
-
-			if (s != null)
-			{
-				scr.LoadFromStream(s);
-			}
-
-			return scr;
 		}
 	}
 }

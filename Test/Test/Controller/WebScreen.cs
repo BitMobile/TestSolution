@@ -24,18 +24,18 @@ namespace Test
 
         private void WebView_OnClick(object sender, EventArgs e)
         {
-            BusinessProcess.DoAction("WebViewScreen");
+            BusinessProcess.MoveTo("WebViewScreen");
         }
 
         private void WebMapGoogle_OnClick(object sender, EventArgs e)
         {
-            BusinessProcess.DoAction("WebMapGoogleScreen");
+            BusinessProcess.MoveTo("WebMapGoogleScreen");
 
         }
 
         private void WebImage_OnClick(object sender, EventArgs e)
         {
-            BusinessProcess.DoAction("WebImageScreen");
+            BusinessProcess.MoveTo("WebImageScreen");
 
         }
 

@@ -135,7 +135,7 @@ namespace Test
 
 		private void SecondEditTextScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("SecondEditTextScreen");
+			BusinessProcess.MoveTo("SecondEditTextScreen");
 		}
 
 		private void Back_OnClick(object sender, EventArgs e)

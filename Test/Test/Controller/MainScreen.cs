@@ -76,33 +76,40 @@ namespace Test
 			focusScreen.OnClick += OpenFocusScreen;
 			vl3.AddChild(focusScreen);
 
+			vl3.AddChild(new Button("Test FisReg", OpenFisRegScreen));
+
 			_scrollView.AddChild(vl);
 			_scrollView.AddChild(vl2);
 			_scrollView.AddChild(vl3);
 			AddChild(_scrollView);
 		}
 
+		private static void OpenFisRegScreen(object sender, EventArgs e)
+		{
+			BusinessProcess.MoveTo("FisRegScreen");
+		}
+
 		private static void OpenFocusScreen(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("FocusScreen");
+			BusinessProcess.MoveTo("FocusScreen");
 		}
 
 		private static void GetPushOnClick(object sender, EventArgs e)
 		{
 			try
 			{
-				LocalNotification.Notify("Test this push!", "JUST GO TO layout screen");
+				LocalNotification.Notify("Test this push!", "JUST GO TO focus screen", "FocusScreen");
 			}
 			catch (Exception exc)
 			{
-				Console.WriteLine(exc);
+				DConsole.WriteLine($"{exc}");
 				throw;
 			}
 		}
 
 		private static void YandexScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("YandexScreen");
+			BusinessProcess.MoveTo("YandexScreen");
 		}
 
 		private static void MakeWebRequest_OnClick(object sender, EventArgs e)
@@ -155,47 +162,47 @@ namespace Test
 
 		private static void ButtonScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("ButtonScreen");
+			BusinessProcess.MoveTo("ButtonScreen");
 		}
 
 		private static void CheckBoxScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("CheckBoxScreen");
+			BusinessProcess.MoveTo("CheckBoxScreen");
 		}
 
 		private static void SomeControlsScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("SomeControlsScreen");
+			BusinessProcess.MoveTo("SomeControlsScreen");
 		}
 
 		private static void LayoutScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("LayoutScreen");
+			BusinessProcess.MoveTo("LayoutScreen");
 		}
 
 		private static void ImageScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("ImageScreen");
+			BusinessProcess.MoveTo("ImageScreen");
 		}
 
 		private static void EditTextScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("EditTextScreen");
+			BusinessProcess.MoveTo("EditTextScreen");
 		}
 
 		private static void MemoEditScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("MemoEditScreen");
+			BusinessProcess.MoveTo("MemoEditScreen");
 		}
 
 		private static void IndicatorScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("IndicatorScreen");
+			BusinessProcess.MoveTo("IndicatorScreen");
 		}
 
 		private static void MediaPlayerScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("MediaPlayerScreen");
+			BusinessProcess.MoveTo("MediaPlayerScreen");
 		}
 
 		private static void ExitButton_OnClick(object sender, EventArgs e)
@@ -205,57 +212,57 @@ namespace Test
 
 		private static void TestXMLScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("TestXMLScreen");
+			BusinessProcess.MoveTo("TestXMLScreen");
 		}
 
 		private static void WebScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("WebScreen");
+			BusinessProcess.MoveTo("WebScreen");
 		}
 
 		private static void SwipeScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("SwipeScreen");
+			BusinessProcess.MoveTo("SwipeScreen");
 		}
 
 		private static void DatabaseScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("DatabaseScreen");
+			BusinessProcess.MoveTo("DatabaseScreen");
 		}
 
 		private static void DialogScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("DialogScreen");
+			BusinessProcess.MoveTo("DialogScreen");
 		}
 
 		private static void CameraPhoneGps_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("CameraPhoneGpsScreen");
+			BusinessProcess.MoveTo("CameraPhoneGpsScreen");
 		}
 
 		private static void FileSystemScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("FileSystemScreen");
+			BusinessProcess.MoveTo("FileSystemScreen");
 		}
 
 		private static void ComponentScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("ComponentScreen");
+			BusinessProcess.MoveTo("ComponentScreen");
 		}
 
 		private static void TestBugsScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("TestBugsScreen");
+			BusinessProcess.MoveTo("TestBugsScreen");
 		}
 
 		private static void ApplicationScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("ApplicationScreen");
+			BusinessProcess.MoveTo("ApplicationScreen");
 		}
 
 		private static void PushScreen_OnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("PushScreen");
+			BusinessProcess.MoveTo("PushScreen");
 		}
 
 		private void ScrollIndex_OnScroll(object sender, EventArgs e)
@@ -275,7 +282,7 @@ namespace Test
 
 		private static void SecondButtonScreenOnClick(object sender, EventArgs e)
 		{
-			BusinessProcess.DoAction("SecondButtonScreen");
+			BusinessProcess.MoveTo("SecondButtonScreen");
 		}
 	}
 }

@@ -30,7 +30,7 @@ namespace Test
             vl.AddChild(new Button("Camera MakeSnapshot", Camera_OnClick));
             vl.AddChild(editText);
             vl.AddChild(new Button("Copy To Clipboard", CopyToClipboard_OnClick));
-            vl.AddChild(new Button("From Clipboard To Dconsole", FromClipboardToConsole_OnClick));
+            vl.AddChild(new Button("From Clipboard To DDConsole", FromClipboardToDConsole_OnClick));
             vl.AddChild(new Button("Gallery", Gallery_OnClick));
             vl.AddChild(new Button("Back", Back_OnClick));
         }
@@ -46,7 +46,7 @@ namespace Test
             Clipboard.SetString(editText.Text);
         }
 
-        private void FromClipboardToConsole_OnClick(object sender, EventArgs e)
+        private void FromClipboardToDConsole_OnClick(object sender, EventArgs e)
         {
             DConsole.WriteLine(string.Format(Clipboard.HasStringValue.ToString()));
             DConsole.WriteLine(Clipboard.GetString());
@@ -57,7 +57,7 @@ namespace Test
             Phone.Call(text.Text);
         }
 
-        private void DconsoleWriteLine(object sender, ResultEventArgs<bool> args)
+        private void DDConsoleWriteLine(object sender, ResultEventArgs<bool> args)
         {
             DConsole.WriteLine(args.Result.ToString());
         }
@@ -67,7 +67,7 @@ namespace Test
         private void Camera_OnClick(object sender, EventArgs e)
         {
 
-            Camera.MakeSnapshot("//private//testPrivate.jpg", 820, DconsoleWriteLine);
+            Camera.MakeSnapshot("//private//testPrivate.jpg", 820, DDConsoleWriteLine);
         }
 
         private void Gallery_OnClick(object sender, EventArgs e)

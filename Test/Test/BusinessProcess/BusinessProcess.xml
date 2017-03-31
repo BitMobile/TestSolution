@@ -27,8 +27,10 @@
 			<Action Name="PushScreen" NextStep="PushScreen" LastStep="MainScreen"></Action>
 			<Action Name="SecondButtonScreen" NextStep="SecondButtonScreen" LastStep="MainScreen"></Action>
 			<Action Name="FocusScreen" NextStep="FocusScreen" LastStep="MainScreen"></Action>
+			<Action Name="FisRegScreen" NextStep="FisRegScreen" LastStep="MainScreen"></Action>
 		</Step>
 
+		<Step Name="FisRegScreen" Controller="FisRegScreen" StyleSheet="Style\main.css"></Step>
 		<Step Name="FocusScreen" Controller="FocusScreen" StyleSheet="Style\main.css"></Step>
 		<Step Name="YandexScreen" Controller="YandexScreen" StyleSheet="Style\main.css"></Step>
 		<Step Name="ButtonScreen" Controller="ButtonScreen" StyleSheet="Style\main.css"></Step>

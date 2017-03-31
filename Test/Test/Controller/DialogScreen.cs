@@ -48,12 +48,12 @@ namespace Test
 		{
 			if (args.Result == Dialog.Result.Yes)
 			{
-				Console.WriteLine("That's good");
+				DConsole.WriteLine("That's good");
 				Dialog.DateTime("What time is is ?", DateTime_Handler);
 			}
 			else if (args.Result == Dialog.Result.No)
 			{
-				Console.WriteLine("That's bad");
+				DConsole.WriteLine("That's bad");
 				Dialog.DateTime("What time is is ?", DateTime_Handler);
 			}
 		}
